@@ -1,10 +1,10 @@
 # function to create an account for cbbdata
 # one account per email, only; will fail if re-using email!
 # password is securely hashed in the database and is not exposed
-
+#' @export
 cbd_create_account <- function(username, password, confirm_password) {
 
-  url <- 'http://www.cbbdata.com/api/auth/register'
+  url <- 'https://www.cbbdata.com/api/auth/register'
 
   resp <- httr2::request(url) |>
     httr2::req_body_json(

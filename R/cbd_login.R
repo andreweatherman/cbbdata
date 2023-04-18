@@ -1,7 +1,7 @@
-
+#' @export
 cbd_login <- function(username, password) {
 
-  url <- 'http://www.cbbdata.com/api/auth/login'
+  url <- 'https://www.cbbdata.com/api/auth/login'
 
   resp <- httr2::request(url) |>
     httr2::req_body_json(
