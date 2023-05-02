@@ -1,7 +1,8 @@
 #' @export
-cbd_torvik_ratings_archive <- function(...) {
+cbd_torvik_game_box <- function(...) {
 
-  base_url <- 'https://www.cbbdata.com/api/torvik/ratings/archive?'
+  base_url <- 'https://www.cbbdata.com/api/torvik/game/box?'
+
   data <- cbbdata:::get_cbd_file(base_url)
 
   # filter data if arguments are passed through

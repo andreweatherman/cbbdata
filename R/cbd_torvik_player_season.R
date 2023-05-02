@@ -3,6 +3,19 @@ cbd_torvik_player_season <- function(...) {
 
   base_url <- 'https://www.cbbdata.com/api/torvik/player/season?'
 
-  cbbdata:::execute_endpoint(base_url = base_url, ...)
+  data <- cbbdata:::get_cbd_file(base_url)
+
+  # filter data if arguments are passed through
+  if (length(cbbdata:::get_args(...)) != 0) {
+
+    # build expression strings
+    expressions <- cbbdata:::build_expressions(data, ...)
+
+    # filter
+    data <- data[eval(expressions)]
+
+  }
+
+  return(data)
 
 }

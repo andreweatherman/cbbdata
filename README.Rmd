@@ -1,0 +1,59 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# cbbdata
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+Welcome to `cbbdata`, an R package designed to grant swift and effortless access to the `cbbdata` API, offering an abundance of college basketball statistics and data! By harnessing the power of back-end SQL queries and direct file transfers, this package equips you with the essential information required to dissect and comprehend the intricacies of college basketball.
+
+Getting started with cbbdata is a breeze – simply sign up for a free API key and delve into the rich world of college basketball data. With its intuitive interface and robust back-end capabilities, this package stands as an indispensable asset for anyone eager to explore the depths of college basketball analysis.
+
+## Installation
+
+You can install the development version of cbbdata from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("andreweatherman/cbbdata")
+```
+
+## Registering for an API key
+
+An API key is free and easy to obtain by using the official `cbbdata` R package. To register, simply pass a username and password to the `cbd_create_account` endpoint. As of April 24, 2023, there is no way to retrieve a forgotten password.
+
+```{r register, eval = FALSE}
+# to register
+cbbdata::cbd_create_account(username = 'xxx', password = 'xxx', confirm_password = 'xxx')
+```
+
+To obtain your key, pass the same credentials to the `cbd_login` endpoint. Your API key will then be stored as an environmental variable in your R session.
+
+```{r login, eval = FALSE}
+# to login
+cbbdata::cbd_login(username = 'xxx', password = 'xxx')
+```
+
+## Example
+
+...
+
+## Elevated/Premium Access
+
+Public access to the `cbbdata` API is completely free but hosting it isn't. If you want to support the project beyond sharing it, please consider donating below.
+
+
+<Insert link here>
