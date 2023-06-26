@@ -73,6 +73,13 @@ get_args <- function(...) {
 
   args <- rlang::list2(...)
 
+  # if no arguments are included, pass return_all as TRUE
+  if(length(args) == 0) {
+
+    args <- append(args, list(return_all = TRUE))
+
+  }
+
   return(args)
 
 }
@@ -134,7 +141,7 @@ to_dt <- function(data) {
 # function to download .parquet file from url
 parquet_from_url <- function(url){
   rlang::check_installed("arrow")
-  # cache_message()
+
   load <- try(curl::curl_fetch_memory(url), silent = TRUE)
 
   if (inherits(load, "try-error")) {
@@ -166,7 +173,7 @@ execute_endpoint <- function(base_url, ...) {
 
 }
 
-# execute endpoint to download player_game and player_season
+# download parquet file from API call
 get_cbd_file <- function(base_url, ...) {
 
   parsed_url <- cbbdata:::get_url(base_url = base_url, ...)

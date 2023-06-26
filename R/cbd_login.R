@@ -9,18 +9,18 @@ cbd_login <- function(username = Sys.getenv('CBD_USER'), password = Sys.getenv('
 
   # try-catch to return error response
   tryCatch({
-    resp <- httr2::request(url) |>
+    resp <- httr2::request(url) %>%
       httr2::req_body_json(
         list(
-          email = username,
+          username = username,
           password = password
         )
-      ) |>
+      ) %>%
       httr2::req_perform()
   }, error = function(e) {rlang::inform(message = 'Invalid username or password!')})
 
-  api_key <- resp |>
-    httr2::resp_body_json() |>
+  api_key <- resp %>%
+    httr2::resp_body_json() %>%
     purrr::pluck(1)
 
   # set as environment variable
