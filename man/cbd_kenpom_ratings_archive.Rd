@@ -11,6 +11,6 @@ Historical KenPom ratings + rankings from 2012-Present. Requires KenPom
 authorization. You can authorize with `cbd_kenpom_authorization`.
 }
 \details{
-To load the complete data set, please set the `return_all` parameter to
-`TRUE`. Else, your data will be filtered by your parameter selections.
+To load the complete data set, pass no arguments through to the function.
+Else, your data will be filtered by your selections.
 }
