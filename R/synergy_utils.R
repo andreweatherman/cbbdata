@@ -85,3 +85,14 @@ cbd_synergy_team_leaders_defense <- function(...) {
   return(data)
 
 }
+
+# player shots (not synergy)
+cbd_player_shots <- function(...) {
+
+  base_url <- 'https://www.cbbdata.com/api/shots/male?'
+
+  data <- cbbdata:::get_cbd_file(base_url)
+
+  return(data)
+
+}

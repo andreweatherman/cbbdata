@@ -1,3 +1,13 @@
+#' Authorize your account with KenPom
+#'
+#' Grants a user access to KenPom endpoints if they have an active KenPom
+#' account.
+#'
+#' Your CBBData account email must match your KenPom email. Pass through your
+#' KenPom password. You will be asked to reauthorize on your KenPom account
+#' expiration date.
+#'
+#' @param password KenPom password, NOT CBBData password.
 #' @export
 cbd_kenpom_authorization <- function(password) {
 

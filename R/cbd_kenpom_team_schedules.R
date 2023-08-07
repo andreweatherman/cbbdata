@@ -1,3 +1,14 @@
+#' KenPom Team Schedules
+#'
+#' Pulls the KenPom team schedule page from 2002-Present.
+#'
+#' Requires KenPom authorization. You can authorize with
+#' `cbd_kenpom_authorization`.
+#'
+#' @param ... OPTIONAL. To load the complete data set, pass no arguments through
+#'   to the function. Else, you can filter on  `team`, `year`, `date` or any
+#'   other data column.
+#'
 #' @export
 cbd_kenpom_team_schedules <- function(...) {
 

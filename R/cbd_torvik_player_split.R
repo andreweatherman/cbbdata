@@ -1,0 +1,21 @@
+#' Barttorvik Player Stat Splits
+#'
+#' Pulls final player season averages by split from 2008-Present.
+#'
+#' @param split The data will default to splitting on game result. If you want
+#'   to split on a different level, you must specify. You can split on
+#'   `location`, `game_type`, `month`, or `game_result` (default).
+#' @param ... OPTIONAL. To load the complete data set, pass no arguments through
+#'   to the function. Else, you can filter on  `year`, `team`, `player`, or any
+#'   other data column.
+#'
+#' @export
+cbd_torvik_player_split <- function(split, ...) {
+
+  base_url <-  glue::glue('https://www.cbbdata.com/api/torvik/player/splits?split={split}')
+
+  data <- cbbdata:::get_cbd_file(base_url, ...)
+
+  return(data)
+
+}

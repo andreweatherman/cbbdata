@@ -1,6 +1,11 @@
-# function to create an account for cbbdata
-# one account per email, only; will fail if re-using email!
-# password is securely hashed in the database and is not exposed
+#' Register for a CBBData Account
+#'
+#' Allows a user to create a CBBData API account to retrieve an API key
+#'
+#' @param username Username
+#' @param email Email
+#' @param password Password
+#' @param confirm_password Re-enter password
 #' @export
 cbd_create_account <- function(username, email, password, confirm_password) {
 

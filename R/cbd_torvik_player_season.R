@@ -1,3 +1,11 @@
+#' Barttorvik Player Season Averages
+#'
+#' Pulls final player season averages from 2008-Present.
+#'
+#' @param ... OPTIONAL. To load the complete data set, pass no arguments through
+#'   to the function. Else, you can filter on  `year`, `team`, `player`,or any
+#'   other data column.
+#'
 #' @export
 cbd_torvik_player_season <- function(...) {
 

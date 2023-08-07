@@ -4,8 +4,12 @@
 \name{cbbdata-package}
 \alias{cbbdata}
 \alias{cbbdata-package}
-\title{cbbdata: What the Package Does (Title Case)}
+\title{cbbdata: Interfaces the CBBData API}
 \description{
-More about what it does (maybe more than one line) Use four spaces when indenting paragraphs within the Description.
+Provides direct access to clean and tidy college basketball data using the CBBData API.
+}
+\author{
+\strong{Maintainer}: Andrew Weatherman \email{andrew@aweatherman.com}
+
 }
 \keyword{internal}
