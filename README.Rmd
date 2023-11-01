@@ -126,9 +126,6 @@ cbbdata::cbd_kenpom_authorization(password = 'xxx')
 - Year-end ratings (`cbd_kenpom_ratings`)
 - Day-by-day ratings (`cbd_kenpom_ratings_archive`)
 
-#### Player Data:
-- Individual player factors (`cbd_kenpom_player_factors`)
-
 #### Game Data:
 - Team schedules (`cbd_kenpom_team_schedules`)
 

@@ -3,7 +3,6 @@
 export(cbd_create_account)
 export(cbd_gt_logos)
 export(cbd_kenpom_authorization)
-export(cbd_kenpom_player_factors)
 export(cbd_kenpom_ratings)
 export(cbd_kenpom_ratings_archive)
 export(cbd_kenpom_team_schedules)

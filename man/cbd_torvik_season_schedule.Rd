@@ -13,3 +13,7 @@ to the function.}
 \description{
 Pulls season schedules from Barttorvik
 }
+\examples{
+\donttest{try(cbd_torvik_season_schedule(year = 2023))}
+
+}
