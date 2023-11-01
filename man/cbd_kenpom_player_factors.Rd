@@ -19,5 +19,5 @@ Requires KenPom authorization. You can authorize with
 `cbd_kenpom_authorization`.
 }
 \examples{
-cbd_kenpom_player_factors(year = 2023, team = 'Duke')
+\donttest{try(cbd_kenpom_player_factors(year = 2023))}
 }

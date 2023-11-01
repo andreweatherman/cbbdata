@@ -5,6 +5,8 @@
 #' @param ... OPTIONAL. To load the complete data set, pass no arguments through
 #'   to the function.
 #'
+#' @examples
+#' \donttest{try(cbd_teams())}
 #' @export
 cbd_teams <- function(...) {
 

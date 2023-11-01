@@ -102,13 +102,18 @@ build_expressions <- function(data, ...) {
 
 }
 
-# build requested url
-get_url <- function(base_url, ...) {
-
+check_key <- function() {
   # log-in user if they are not already logged in
   if (Sys.getenv('CBD_API_KEY') == '') {
     cbbdata::cbd_login()
   }
+}
+
+# build requested url
+get_url <- function(base_url, ...) {
+
+  # log-in user if they are not already logged in
+  cbbdata:::check_key()
 
   parsed_url <- cbbdata:::get_args(..., key = Sys.getenv('CBD_API_KEY')) %>%
     purrr::pmap(list) %>%
@@ -190,3 +195,31 @@ benz_attr <- function () {
                               i = 'devtools::install_github("lbenz730/ncaahoopR")'),
                   .frequency = "once", .frequency_id = "benz_attr")
 }
+
+# validate input function
+validate_input <- function(input, valid_values, message) {
+  if (!(input %in% valid_values)) cli_abort(message)
+}
+
+# function to generate url for trank factors
+generate_trank_factors_url <- function(year, q, v, t, top, start=NULL, end=NULL, conf=NULL) {
+
+  parsed_url <- httr::modify_url(
+    url = "https://barttorvik.com/trank.php",
+    query = list(
+      year = year,
+      revquad = 0,
+      quad = q,
+      venue = v,
+      type = t,
+      top = top,
+      begin = start,
+      end = end,
+      conyes = conf,
+      csv = 1
+    )
+  )
+
+  return(parsed_url)
+}
+

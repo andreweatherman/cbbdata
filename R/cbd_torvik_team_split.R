@@ -8,11 +8,15 @@
 #' @param ... OPTIONAL. To load the complete data set, pass no arguments through
 #'   to the function. Else, you can filter on  `year`, `team`, `conf`, or any
 #'   other data column.
+#' @importFrom glue glue
+#'
+#' @examples
+#' \donttest{try(cbd_torvik_team_split(year = 2023, split = 'month'))}
 #'
 #' @export
 cbd_torvik_team_split <- function(split, ...) {
 
-  base_url <-  glue::glue('https://www.cbbdata.com/api/torvik/team/splits?split={split}')
+  base_url <-  glue('https://www.cbbdata.com/api/torvik/team/splits?split={split}')
 
   data <- cbbdata:::get_cbd_file(base_url, ...)
 

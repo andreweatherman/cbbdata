@@ -9,10 +9,14 @@
 #'   to the function. Else, you can filter on  `year`, `team`, `player`, or any
 #'   other data column.
 #'
+#' @importFrom glue glue
+#' @examples
+#' \donttest{try(cbd_torvik_player_split(year = 2023, team = 'Duke', split = 'game_result'))}
+#'
 #' @export
 cbd_torvik_player_split <- function(split, ...) {
 
-  base_url <-  glue::glue('https://www.cbbdata.com/api/torvik/player/splits?split={split}')
+  base_url <-  glue('https://www.cbbdata.com/api/torvik/player/splits?split={split}')
 
   data <- cbbdata:::get_cbd_file(base_url, ...)
 

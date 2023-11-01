@@ -9,9 +9,8 @@
 Welcome to `cbbdata`, an R package designed to grant swift and
 effortless access to the CBBData API, offering an abundance of college
 basketball statistics and data! By harnessing the power of back-end SQL
-queries and direct file transfers, this package equips you with the
-essential information required to dissect and comprehend the intricacies
-of college basketball.
+queries and direct file transfers, this package equips you with
+essential college basketball data and statistics.
 
 The benefit of using `cbbdata` is two-fold:
 
@@ -22,9 +21,7 @@ The benefit of using `cbbdata` is two-fold:
     making it easy to join and compare data from different sources.
 
 Getting started with `cbbdata` is a breeze – simply sign up for a free
-API key and start grabbing data! With its intuitive interface and robust
-back-end capabilities, this package stands as an indispensable asset for
-anyone eager to explore the depths of college basketball analysis.
+API key and start grabbing data!
 
 ## Installation
 
@@ -40,7 +37,9 @@ devtools::install_github("andreweatherman/cbbdata")
 An API key is free and easy to obtain by using the official `cbbdata` R
 package. To register, simply pass a username and password to the
 `cbd_create_account` endpoint. Your API key will be emailed to you –
-make sure to check your spam folder!
+make sure to check your spam folder – but you need not manually store
+your API key anywhere. The preferred way to access your account is with
+your username and password.
 
 *Note: If you want to access KenPom data, your CBBData account email
 must match your KenPom account email*
@@ -91,9 +90,9 @@ you in. With this method, you will not have to log-in again.
 
 ### Barttorvik:
 
-Developer Andrew Weatherman wrote the popular `toRvik` R package.
-`cbbdata` replaces `toRvik` and brings with it a rich collection of
-Barttorvik data.
+Developer [Andrew Weatherman](https://twitter.com/andreweatherman) wrote
+the popular `toRvik` R package. `cbbdata` replaces `toRvik` and brings
+with it a rich collection of Barttorvik data.
 
 #### Metric Ratings:
 
@@ -104,20 +103,34 @@ Barttorvik data.
 
 -   Individual game logs (`cbd_torvik_player_game`)
 -   Season averages (`cbd_torvik_player_season`)
--   Season splits (`cbd_torvik_player_splits`)
+-   Season splits (`cbd_torvik_player_split`)
 
-#### Team Data:
+#### Team + Conference Data:
 
--   Team splits (`cbd_torvik_team_splits`)
+-   Team stats splits (`cbd_torvik_team_split`)
+-   Team histories (`cbd_torvik_team_history`)
+-   Team four factor splits (`cbd_torvik_team_factors`)
+-   Conference four factor splits (`cbd_torvik_conf_factors`)
 
 #### Game Data:
 
 -   Individual game box (`cbd_torvik_game_box`)
--   Individual game [four
-    factors](https://www.basketball-reference.com/about/factors.html)
-    (`cbd_torvik_game_factors`)
+-   Individual game four factors (`cbd_torvik_game_factors`)
+-   Individual game stats (box + factors) (`cbd_torvik_game_stats`)
+-   Season schedule (`cbd_torvik_season_schedule`)
 
-…
+#### Predictions
+
+-   Individual game predictions (`cbd_torvik_game_prediction`)
+-   Team season predictions (`cbd_torvik_season_prediction`)
+-   Team season simulations (`cbd_torvik_season_simulation`)
+
+#### Tournament Results + Resumes
+
+-   Tournament performance (`cbd_torvik_ncaa_results`)
+-   Tournament “committee sheets” (`cbd_torvik_ncaa_sheets`)
+-   “Resume” database (`cbd_torvik_resume_database`)
+-   Similar team tournament resumes (`cbd_torvik_similar_resumes`)
 
 ### KenPom
 
@@ -146,8 +159,6 @@ cbbdata::cbd_kenpom_authorization(password = 'xxx')
 #### Game Data:
 
 -   Team schedules (`cbd_kenpom_team_schedules`)
-
-…
 
 ## Support
 

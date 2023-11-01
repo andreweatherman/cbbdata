@@ -18,3 +18,6 @@ Pulls the KenPom team schedule page from 2002-Present.
 Requires KenPom authorization. You can authorize with
 `cbd_kenpom_authorization`.
 }
+\examples{
+\donttest{try(cbd_kenpom_team_schedules(year = 2023, team = 'Duke'))}
+}

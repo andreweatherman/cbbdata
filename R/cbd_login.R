@@ -9,7 +9,10 @@
 #'
 #' @param username Username
 #' @param password Password
-#'
+#' @import httr2
+#' @importFrom rlang inform
+#' @importFrom purrr pluck
+#' @importFrom cli col_green
 #' @export
 cbd_login <- function(username = Sys.getenv('CBD_USER'), password = Sys.getenv('CBD_PW')) {
 
@@ -21,24 +24,24 @@ cbd_login <- function(username = Sys.getenv('CBD_USER'), password = Sys.getenv('
 
   # try-catch to return error response
   tryCatch({
-    resp <- httr2::request(url) %>%
-      httr2::req_body_json(
+    resp <- request(url) %>%
+      req_body_json(
         list(
           username = username,
           password = password
         )
       ) %>%
-      httr2::req_perform()
-  }, error = function(e) {rlang::inform(message = 'Invalid username or password!')})
+      req_perform()
+  }, error = function(e) {inform(message = 'Invalid username or password!')})
 
   api_key <- resp %>%
-    httr2::resp_body_json() %>%
-    purrr::pluck(1)
+    resp_body_json() %>%
+    pluck(1)
 
   # set as environment variable
   Sys.setenv(CBD_API_KEY = api_key)
 
   # return confirmation
-  return(cat(cli::col_green('API Key set!')))
+  return(cat(col_green('API Key set!')))
 
 }

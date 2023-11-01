@@ -14,3 +14,6 @@ other data column.}
 \description{
 Pulls final player season averages from 2008-Present.
 }
+\examples{
+\donttest{try(cbd_torvik_player_season(year = 2023, team = 'Duke'))}
+}

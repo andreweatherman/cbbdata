@@ -6,13 +6,15 @@
 #' @param email Email
 #' @param password Password
 #' @param confirm_password Re-enter password
+#' @import httr2
+#' @importFrom cli col_green col_br_red
 #' @export
 cbd_create_account <- function(username, email, password, confirm_password) {
 
   url <- 'https://www.cbbdata.com/api/auth/register'
 
-  resp <- httr2::request(url) %>%
-    httr2::req_body_json(
+  resp <- request(url) %>%
+    req_body_json(
       list(
         username = username,
         email = email,
@@ -20,16 +22,16 @@ cbd_create_account <- function(username, email, password, confirm_password) {
         confirm_password = confirm_password
       )
     ) %>%
-    httr2::req_perform()
+    req_perform()
 
-  if (httr2::resp_status(resp) == 201) {
+  if (resp_status(resp) == 201) {
     # return confirmation
-    return(cat(cli::col_green('Account registered! Use `cbd_login` to get your API key.')))
+    return(cat(col_green('Account registered! Use `cbd_login` to get your API key.')))
 
   }
 
-  else if (httr2::resp_status(resp) != 201) {
-    return(cat(cli::col_br_red('Incorrect username or password!')))
+  else if (resp_status(resp) != 201) {
+    return(cat(col_br_red('Incorrect username or password!')))
   }
 
 }

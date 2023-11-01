@@ -10,7 +10,7 @@
 #'   or any other data column.
 #'
 #' @examples
-#' cbd_kenpom_player_factors(year = 2023, team = 'Duke')
+#' \donttest{try(cbd_kenpom_player_factors(year = 2023))}
 #' @export
 cbd_kenpom_player_factors <- function(...) {
 

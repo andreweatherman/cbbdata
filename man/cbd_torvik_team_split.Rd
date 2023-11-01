@@ -18,3 +18,7 @@ other data column.}
 \description{
 Pulls final team season averages by split from 2008-Present.
 }
+\examples{
+\donttest{try(cbd_torvik_team_split(year = 2023, split = 'month'))}
+
+}

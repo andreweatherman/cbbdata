@@ -13,3 +13,6 @@ to the function.}
 \description{
 Pulls team matching dictionary + logos, colors, and wordmarks.
 }
+\examples{
+\donttest{try(cbd_teams())}
+}

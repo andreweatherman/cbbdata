@@ -14,3 +14,6 @@ other data column.}
 \description{
 Pulls year-end T-Rank ratings and adjusted efficiencies from 2008-Present.
 }
+\examples{
+\donttest{try(cbd_torvik_ratings(year = 2023))}
+}

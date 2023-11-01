@@ -18,3 +18,7 @@ other data column.}
 \description{
 Pulls final player season averages by split from 2008-Present.
 }
+\examples{
+\donttest{try(cbd_torvik_player_split(year = 2023, team = 'Duke', split = 'game_result'))}
+
+}

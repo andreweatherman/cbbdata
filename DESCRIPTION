@@ -15,6 +15,7 @@ Imports:
     cli,
     curl,
     data.table,
+    dplyr,
     fasttime,
     glue,
     httr,

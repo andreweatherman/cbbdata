@@ -14,3 +14,6 @@ other data column.}
 \description{
 Historical T-Rank ratings + rankings from 2015-Present.
 }
+\examples{
+\donttest{try(cbd_torvik_ratings_archive(year = 2023, conf = 'ACC'))}
+}

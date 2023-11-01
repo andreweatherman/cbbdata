@@ -18,3 +18,6 @@ Historical KenPom ratings + rankings from 2012-Present.
 Requires KenPom authorization. You can authorize with
 `cbd_kenpom_authorization`.
 }
+\examples{
+\donttest{try(cbd_kenpom_ratings_archive(year = 2023))}
+}

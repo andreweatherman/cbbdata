@@ -6,6 +6,8 @@
 #'   to the function. Else, you can filter on  `year`, `team`, `player`,or any
 #'   other data column.
 #'
+#' @examples
+#' \donttest{try(cbd_torvik_player_season(year = 2023, team = 'Duke'))}
 #' @export
 cbd_torvik_player_season <- function(...) {
 

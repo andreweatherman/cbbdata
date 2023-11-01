@@ -14,3 +14,6 @@ column.}
 \description{
 Pulls side-wide player IDs and meta data.
 }
+\examples{
+\donttest{try(cbd_players())}
+}
