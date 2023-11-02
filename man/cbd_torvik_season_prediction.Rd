@@ -4,7 +4,7 @@
 \alias{cbd_torvik_season_prediction}
 \title{T-Rank Season Predictions}
 \usage{
-cbd_torvik_season_prediction(team, year, date)
+cbd_torvik_season_prediction(team, year, date, include_postseason = FALSE)
 }
 \arguments{
 \item{team}{Team to predict with.}
@@ -13,6 +13,10 @@ cbd_torvik_season_prediction(team, year, date)
 
 \item{date}{Date of game and must be a consecutive string in YYYYMMDD format
 (defaults to current day).}
+
+\item{include_postseason}{A boolean representing whether conference
+tournament and other postseason games should be included in the simulation
+(defaults to FALSE).}
 }
 \value{
 Returns a tibble with game predictions.

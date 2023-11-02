@@ -9,6 +9,9 @@
 #' @param year Year to run prediction on.
 #' @param date Date of game and must be a consecutive string in YYYYMMDD format
 #'   (defaults to current day).
+#' @param include_postseason A boolean representing whether conference
+#'   tournament and other postseason games should be included in the simulation
+#'   (defaults to FALSE).
 #' @import dplyr
 #' @importFrom httr modify_url
 #' @importFrom jsonlite fromJSON
@@ -17,7 +20,7 @@
 #' \donttest{try(cbd_torvik_season_prediction('Duke', 2023, '20230101'))}
 #'
 #' @export
-cbd_torvik_season_prediction <- function(team, year, date) {
+cbd_torvik_season_prediction <- function(team, year, date, include_postseason = FALSE) {
 
   cbbdata:::check_key() # ensure user is logged-in
 
@@ -27,7 +30,8 @@ cbd_torvik_season_prediction <- function(team, year, date) {
       key = Sys.getenv('CBD_API_KEY'),
       team = team,
       year = year,
-      date = date
+      date = date,
+      postseason = include_postseason
     )
   )
 

@@ -10,6 +10,9 @@
 #'   (defaults to current day).
 #' @param simulations An integer representing how many sims. to run (defaults to
 #'   10,000).
+#' @param include_postseason A boolean representing whether conference
+#'   tournament and other postseason games should be included in the simulation
+#'   (defaults to FALSE).
 #' @import dplyr
 #' @importFrom httr modify_url
 #' @importFrom jsonlite fromJSON
@@ -18,7 +21,8 @@
 #' \donttest{try(cbd_torvik_season_simulation('Duke', 2023, '20230101'))}
 #'
 #' @export
-cbd_torvik_season_simulation <- function(team, year, date, simulations = 10000) {
+cbd_torvik_season_simulation <- function(team, year, date, simulations = 10000,
+                                         include_postseason = FALSE) {
 
   cbbdata:::check_key() # ensure user is logged-in
 
@@ -29,7 +33,8 @@ cbd_torvik_season_simulation <- function(team, year, date, simulations = 10000) 
       team = team,
       year = year,
       date = date,
-      num_simulations = simulations
+      num_simulations = simulations,
+      postseason = include_postseason
     )
   )
 

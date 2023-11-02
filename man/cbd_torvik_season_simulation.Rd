@@ -4,7 +4,13 @@
 \alias{cbd_torvik_season_simulation}
 \title{T-Rank Season Simulation}
 \usage{
-cbd_torvik_season_simulation(team, year, date, simulations = 10000)
+cbd_torvik_season_simulation(
+  team,
+  year,
+  date,
+  simulations = 10000,
+  include_postseason = FALSE
+)
 }
 \arguments{
 \item{team}{Team to predict with.}
@@ -16,6 +22,10 @@ cbd_torvik_season_simulation(team, year, date, simulations = 10000)
 
 \item{simulations}{An integer representing how many sims. to run (defaults to
 10,000).}
+
+\item{include_postseason}{A boolean representing whether conference
+tournament and other postseason games should be included in the simulation
+(defaults to FALSE).}
 }
 \value{
 Returns a tibble with simulation results.
