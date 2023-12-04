@@ -20,7 +20,7 @@
 #' \donttest{try(cbd_torvik_season_prediction('Duke', 2023, '20230101'))}
 #'
 #' @export
-cbd_torvik_season_prediction <- function(team, year, date, include_postseason = FALSE) {
+cbd_torvik_season_prediction <- function(team, year, date = NULL, include_postseason = FALSE) {
 
   cbbdata:::check_key() # ensure user is logged-in
 

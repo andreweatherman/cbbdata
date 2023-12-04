@@ -18,13 +18,15 @@
 #' @importFrom jsonlite fromJSON
 #' @importFrom magrittr %>%
 #' @examples
-#' \donttest{try(cbd_torvik_season_simulation('Duke', 2023, '20230101'))}
+#' \donttest{try(cbd_torvik_season_simulation('Duke', 2023, date = '20230101'))}
 #'
 #' @export
-cbd_torvik_season_simulation <- function(team, year, date, simulations = 10000,
+cbd_torvik_season_simulation <- function(team, year, simulations = 10000, date = NULL,
                                          include_postseason = FALSE) {
 
   cbbdata:::check_key() # ensure user is logged-in
+
+  if(is.null(date)) { date = gsub('-', '', Sys.Date() - 1) }
 
   url <- modify_url(
     url = 'https://www.cbbdata.com/api/torvik/season/simulation?',
@@ -32,7 +34,7 @@ cbd_torvik_season_simulation <- function(team, year, date, simulations = 10000,
       key = Sys.getenv('CBD_API_KEY'),
       team = team,
       year = year,
-      date = date,
+      date = gsub('-', '', date),
       num_simulations = simulations,
       postseason = include_postseason
     )

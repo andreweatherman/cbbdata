@@ -19,7 +19,7 @@
 #' \donttest{try(cbd_torvik_game_prediction('Duke', 'Charlotte', '20221110'))}
 #'
 #' @export
-cbd_torvik_game_prediction <- function(team, opp, date, location = 'H') {
+cbd_torvik_game_prediction <- function(team, opp, date = NULL, location = 'H') {
 
   cbbdata:::check_key() # ensure user is logged-in
 
@@ -34,8 +34,15 @@ cbd_torvik_game_prediction <- function(team, opp, date, location = 'H') {
     )
   )
 
-  data <- fromJSON(url) %>%
-    mutate(date = as.Date(as.POSIXct(date / 1000, origin = "1970-01-01", tz = "UTC"), format = "%Y-%m-%d"))
+  data <- fromJSON(url)
+
+  data <- tryCatch({
+    data <- data %>%
+      mutate(date = as.Date(as.POSIXct(date / 1000, origin = "1970-01-01", tz = "UTC"), format = "%Y-%m-%d"))
+  }, error = function(e) {
+    data <- data %>%
+      mutate(date=as.Date(date, '%Y%m%d'))
+  })
 
   return(data)
 

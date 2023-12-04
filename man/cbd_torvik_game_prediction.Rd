@@ -4,7 +4,7 @@
 \alias{cbd_torvik_game_prediction}
 \title{T-Rank Game Predictions}
 \usage{
-cbd_torvik_game_prediction(team, opp, date, location = "H")
+cbd_torvik_game_prediction(team, opp, date = NULL, location = "H")
 }
 \arguments{
 \item{team}{Team 1 in matchup (primary team)}

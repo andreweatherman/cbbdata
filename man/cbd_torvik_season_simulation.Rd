@@ -7,8 +7,8 @@
 cbd_torvik_season_simulation(
   team,
   year,
-  date,
   simulations = 10000,
+  date = NULL,
   include_postseason = FALSE
 )
 }
@@ -17,11 +17,11 @@ cbd_torvik_season_simulation(
 
 \item{year}{Year to run prediction on.}
 
-\item{date}{Date of game and must be a consecutive string in YYYYMMDD format
-(defaults to current day).}
-
 \item{simulations}{An integer representing how many sims. to run (defaults to
 10,000).}
+
+\item{date}{Date of game and must be a consecutive string in YYYYMMDD format
+(defaults to current day).}
 
 \item{include_postseason}{A boolean representing whether conference
 tournament and other postseason games should be included in the simulation
@@ -35,6 +35,6 @@ Run a simulation to determine how many games a team is projected to win using
 their schedule at any given date in the season.
 }
 \examples{
-\donttest{try(cbd_torvik_season_simulation('Duke', 2023, '20230101'))}
+\donttest{try(cbd_torvik_season_simulation('Duke', 2023, date = '20230101'))}
 
 }

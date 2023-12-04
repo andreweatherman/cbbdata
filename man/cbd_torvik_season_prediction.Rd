@@ -4,7 +4,12 @@
 \alias{cbd_torvik_season_prediction}
 \title{T-Rank Season Predictions}
 \usage{
-cbd_torvik_season_prediction(team, year, date, include_postseason = FALSE)
+cbd_torvik_season_prediction(
+  team,
+  year,
+  date = NULL,
+  include_postseason = FALSE
+)
 }
 \arguments{
 \item{team}{Team to predict with.}

@@ -4,12 +4,20 @@
 \alias{cbd_gt_logos}
 \title{Render in Logo-Team HTML for Tables}
 \usage{
-cbd_gt_logos(data, team_column, logo_type = "logo", logo_height = 25)
+cbd_gt_logos(
+  data,
+  team_column,
+  logo_column = "team_logo",
+  logo_type = "logo",
+  logo_height = 25
+)
 }
 \arguments{
 \item{data}{Pass through your plotting data}
 
 \item{team_column}{Indicate which column contains your `team` variable}
+
+\item{logo_column}{Indicates the name of the HTML column}
 
 \item{logo_type}{Indicate whether you want to plot logos ('logo', default) or
 wordmarks ('wordmark')}
@@ -28,7 +36,8 @@ I really hate putting team logos and names in separate columns,
 and this helper function will add team logos or wordmarks and create
 the HTML code to render in logos and teams in the same column for tables.
 If you are using `gt` to plot, you must use `fmt_markdown(team_logo)` to
-render in the HTML.
+render in the HTML. Set `logo_column` to your `team` variable if you wish
+to overwrite your `team` column with the logo HTML.
 }
 \examples{
 \donttest{try(cbd_torvik_ratings(year=2023) |> head() |> select(team, conf) |>
