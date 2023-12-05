@@ -40,7 +40,7 @@ render in the HTML. Set `logo_column` to your `team` variable if you wish
 to overwrite your `team` column with the logo HTML.
 }
 \examples{
-\donttest{try(cbd_torvik_ratings(year=2023) |> head() |> select(team, conf) |>
-cbd_gt_logos(team) |> gt() |> fmt_markdown(team_logo))}
+\donttest{try(cbd_torvik_ratings(year=2023) \%>\% head() \%>\% select(team, conf) \%>\%
+cbd_gt_logos(team) \%>\% gt() \%>\% fmt_markdown(team_logo))}
 
 }

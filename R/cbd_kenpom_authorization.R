@@ -19,7 +19,7 @@ cbd_kenpom_authorization <- function(password) {
     req_body_form(
         key = Sys.getenv('CBD_API_KEY'),
         password = password
-      ) |>
+      ) %>%
     req_perform() %>%
     resp_body_json()
 

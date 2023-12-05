@@ -22,8 +22,8 @@
 #' @importFrom rlang ensym as_string
 #' @importFrom magrittr %>%
 #' @examples
-#' \donttest{try(cbd_torvik_ratings(year=2023) |> head() |> select(team, conf) |>
-#' cbd_gt_logos(team) |> gt() |> fmt_markdown(team_logo))}
+#' \donttest{try(cbd_torvik_ratings(year=2023) %>% head() %>% select(team, conf) %>%
+#' cbd_gt_logos(team) %>% gt() %>% fmt_markdown(team_logo))}
 #'
 #' @export
 cbd_gt_logos <- function(data, team_column, logo_column = 'team_logo', logo_type = 'logo', logo_height = 25) {
