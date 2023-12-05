@@ -16,6 +16,8 @@ cbd_kenpom_ratings <- function(...) {
 
   base_url <- 'https://www.cbbdata.com/api/kenpom/ratings?'
 
-  cbbdata:::execute_endpoint(base_url = base_url, ...)
+  data <- cbbdata:::get_cbd_file(base_url, ...)
+
+  return(data)
 
 }
