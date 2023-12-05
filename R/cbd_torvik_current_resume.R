@@ -24,20 +24,29 @@ cbd_torvik_current_resume <- function() {
     select(team, t_rank = barthag_rk, barthag, adj_o, adj_o_rk, adj_d, adj_d_rk,
            adj_t, adj_t_rk, wab)
 
-  # scrape table
+  # get actual net with full teams (not all teams in tranketology)
   local_options(HTTPUserAgent='CBB-DATA') # in case user on windows
+  current_net <- read_html('https://barttorvik.com/net4cast.php?conlimit=All&now=1') %>%
+    html_table() %>%
+    pluck(1) %>%
+    clean_names() %>%
+    select(net = now, team, quad1, quad2, quad3, quad4)
+
+  # scrape table
   data <- suppressWarnings({
     read_html('https://barttorvik.com/tranketology-now.php') %>%
       html_table() %>%
       pluck(1) %>%
       clean_names() %>%
-      filter(team != '') %>% # throw out row sep.
-      mutate(team = trimws(gsub('[*0-9]', '', team))) %>% # clean team name
+      filter(!team %in% c('', 'First Teams Out')) %>% # throw out row sep.
+      mutate(team = trimws(gsub('[*0-9]', '', team)),
+             team = trimws(gsub(" FO| NO", '', team))) %>% # clean team name
       rename('wab_rk' = wab) %>% # rename wab col. to join on actual wab value.
-      left_join(current_ratings, by = 'team') %>%
-      select(seed, team, conf, barthag, t_rank, net, elo, resume, wab_rk, wab, pwr,
-             starts_with('adj')) %>%
-      mutate(across(-c(team, conf), as.numeric))
+      mutate(across(-c(team, conf), as.numeric)) %>%
+      full_join(current_net, by = 'team') %>% # add current net
+      left_join(current_ratings, by = 'team') %>% # add on trank data
+      select(seed, team, conf, barthag, t_rank, net = net.y, elo, resume, wab_rk, wab,
+             starts_with('quad'), starts_with('adj'))
   })
 
   return(data)
