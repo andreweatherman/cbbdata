@@ -33,4 +33,5 @@ Imports:
     usethis,
     withr
 Roxygen: list(markdown = TRUE)
-URL: https://andreweatherman.github.io/cbbdata/
+URL: https://cbbdata.aweatherman.com/
+BugReports: https://github.com/andreweatherman/cbbdata
