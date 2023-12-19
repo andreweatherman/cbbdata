@@ -18,12 +18,19 @@ Imports:
     dplyr,
     fasttime,
     glue,
+    gt,
     httr,
     httr2,
+    janitor,
+    jsonlite,
     magrittr,
     purrr,
+    readr,
     rlang,
+    rvest,
     stringr,
-    usethis
+    tidyr,
+    usethis,
+    withr
 Roxygen: list(markdown = TRUE)
 URL: https://andreweatherman.github.io/cbbdata/

@@ -8,6 +8,13 @@
 \description{
 Provides direct access to clean and tidy college basketball data using the CBBData API.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://andreweatherman.github.io/cbbdata/}
+}
+
+}
 \author{
 \strong{Maintainer}: Andrew Weatherman \email{andrew@aweatherman.com}
 
