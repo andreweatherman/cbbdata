@@ -1,0 +1,73 @@
+---
+title: "Introducing The CBBData API"
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup, echo=FALSE, eval=FALSE}
+library(cbbdata)
+```
+
+## Hi, I'm Andrew!
+
+Hello there! I’m Andrew Weatherman, an avid open-source R developer and a die-hard college basketball enthusiast. My journey with R began during COVID, and I am entirely self-taught. In 2022, I ventured into the realm of "real coding" and developed the `toRvik` package, a tool for accessing college basketball data. It was my first major project and, despite its success, presented a fair share of challenges in maintenance.
+
+In May 2023, I embarked on a new project: `cbbdata`. This Flask-based API is designed to deliver comprehensive, up-to-date college basketball statistics faster and more efficiently than its predecessor, `toRvik`. `cbbdata` has been a significant undertaking, and I'm excited to finally share it with the community.
+
+A bit more about me for those joining from Twitter: I graduated from Duke University in 2023. During my time there, I was a student manager for the men's basketball program, coinciding with Coach K's final run and Jon Scheyer's first season.
+
+Currently, I'm pursuing a degree in Mathematics at the University of North Carolina at Charlotte, with an expected graduation date of May 2024. Post-graduation, my plans are to either continue my education with a master’s in data science or jump straight into the workforce.
+
+## What is cbbdata?
+
+`cbbdata` is an R package designed for anyone passionate about college basketball statistics. It simplifies the process of accessing and analyzing a wealth of college basketball data, making it more efficient and user-friendly than ever before.
+
+## Key Features of cbbdata
+
+`cbbdata` ships with 26 functions, and there is a lot to love about this package. Here are some brief highlights:
+
+- **Comprehensive Game-by-Game Logs:** Access detailed box scores and advanced metrics for players and teams dating back to 2008 (`cbd_torvik_player_game` and `cbd_torvik_game_box/factors`). You can further find per-game player and team splits on month, location, result, and game type factors (`cbd_torvik_player/team_split`).
+
+- **Daily Updated NET Rankings:** Find the latest NET rankings every morning (`cbd_torvik_current_resume`).
+
+- **Game Predictions with Barttorvik:** Simulate any matchup, real or otherwise, using our game prediction feature, powered by Barttorvik (`cbd_torvik_game_prediction`). It’s perfect for pre-game analyses and hypothetical scenario discussions.
+
+- **Plot team logos with `gt`:** Okay, sure, this one isn't data-focused, but it's perhaps my favorite function. Rebuild your `team` column with a logo and team name and render in a `gt` table. Gone are the days of awkwardly having separate columns for your logo and team name (`cbd_gt_logos`). [Just like here!](https://x.com/andreweatherman/status/1730678741846704451?s=20)
+
+## Why cbbdata?
+
+`cbbdata` is designed with the end-user in mind. It's built from the ground up to be more powerful, yet as intuitive as `toRvik`. The package aims to address some of the limitations of `toRvik` while introducing new features and capabilities. Importantly, say goodbye to loops! With `cbbdata`, you can access full data files by passing no arguments to functions. Otherwise, you can filter by year, team, conference, etc.
+
+## A Note on Documentation
+
+I am aware that the documentation is still a work in progress. As a developer passionate about this project, I wanted to release `cbbdata` to the community as soon as possible. Continuous improvements and updates to the documentation will be made.
+
+This release marks just the beginning. I am committed to regular updates and improvements to `cbbdata`, based on community feedback and evolving needs.
+
+## Get Started with cbbdata
+
+`cbbdata` is now available for use! Start by signing up for a free API key, and you’ll be on your way to exploring the depths of college basketball statistics.
+
+### Install
+
+```{r, eval = FALSE}
+# install.packages("devtools")
+devtools::install_github("andreweatherman/cbbdata")
+```
+
+### Registering
+
+```{r, eval=FALSE}
+cbbdata::cbd_create_account(username, email, password, confirm_password)
+```
+
+
+## Your Feedback Matters
+
+As with `toRvik`, your feedback is invaluable in shaping `cbbdata`. I encourage you to share your experiences, suggestions, and questions. You can find me on [Twitter](https://twitter.com/andreweatherman).
+

@@ -19,7 +19,7 @@ library(tidyverse)
 <!-- badges: start -->
 <!-- badges: end -->
 
-In the vast arena of college basketball data, finding comprehensive, easily accessible, and up-to-date statistics can be a daunting task. cbbdata emerges as your reliable partner in this quest, offering an unparalleled depth of college basketball insights, just a line of code away.
+In the vast arena of college basketball data, finding comprehensive, easily accessible, and up-to-date statistics can be a daunting task. `cbbdata` emerges as your reliable partner in this quest, offering an unparalleled depth of college basketball insights, just a line of code away.
 
 **Unmatched Access, Uncomplicated Process:** `cbbdata` is your key to unlocking a treasure trove of college basketball statistics. Say goodbye to the hurdles of data scraping. Our package is designed for efficiency and simplicity, providing a straightforward pathway to the data you need.
 

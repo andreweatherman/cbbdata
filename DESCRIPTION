@@ -35,3 +35,4 @@ Imports:
 Roxygen: list(markdown = TRUE)
 URL: https://cbbdata.aweatherman.com/
 BugReports: https://github.com/andreweatherman/cbbdata
+Config/Needs/website: rmarkdown

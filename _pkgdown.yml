@@ -16,6 +16,7 @@ navbar:
   structure:
     left:
     - reference
+    - articles
     - news
     right:
     - search

@@ -8,7 +8,7 @@
 
 In the vast arena of college basketball data, finding comprehensive,
 easily accessible, and up-to-date statistics can be a daunting task.
-cbbdata emerges as your reliable partner in this quest, offering an
+`cbbdata` emerges as your reliable partner in this quest, offering an
 unparalleled depth of college basketball insights, just a line of code
 away.
 
@@ -122,7 +122,7 @@ cbbdata::cbd_torvik_team_factors(year = 2024, no_bias = TRUE) %>%
 #>    team        barthag adj_o adj_d
 #>    <chr>         <dbl> <dbl> <dbl>
 #>  1 Houston       0.983  116.  81.2
-#>  2 Purdue        0.972  124.  91.1
+#>  2 Purdue        0.972  124.  91.0
 #>  3 Arizona       0.971  119.  87.7
 #>  4 Connecticut   0.963  125.  93.9
 #>  5 BYU           0.956  118.  90.1
