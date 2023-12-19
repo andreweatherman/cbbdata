@@ -8,7 +8,7 @@ cbd_torvik_ratings_archive(...)
 }
 \arguments{
 \item{...}{OPTIONAL. To load the complete data set, pass no arguments through
-to the function. Else, you can filter on  `team`, `conf`, `year`, or any
+to the function. Else, you can filter on  \code{team}, \code{conf}, \code{year}, or any
 other data column.}
 }
 \description{

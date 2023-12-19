@@ -8,7 +8,7 @@ cbd_torvik_player_season(...)
 }
 \arguments{
 \item{...}{OPTIONAL. To load the complete data set, pass no arguments through
-to the function. Else, you can filter on  `year`, `team`, `player`,or any
+to the function. Else, you can filter on  \code{year}, \code{team}, \code{player},or any
 other data column.}
 }
 \description{

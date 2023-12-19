@@ -15,7 +15,7 @@ cbd_login(username = Sys.getenv("CBD_USER"), password = Sys.getenv("CBD_PW"))
 Retrieves a user's CBBData API key.
 }
 \details{
-If you are unsure on how to edit your `.Renviron` file, pass no arguments
+If you are unsure on how to edit your \code{.Renviron} file, pass no arguments
 through the function; it will walk you through the process and create a
 persistent log-in. Else, pass your username and password through the function
 to log-in for the current session only.

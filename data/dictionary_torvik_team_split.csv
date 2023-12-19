@@ -1,0 +1,60 @@
+field,data_type,description
+team,character,Team
+year,numeric,Year
+SPLIT_VARIABLE,character,Will vary. This shows you what you are splitting on.
+min,numeric,Game minutes
+pos,numeric,Game possessions
+fgm,numeric,Field goals made
+fga,numeric,Field goals attempted
+fg_pct,numeric,Field goal percentage
+tpm,numeric,Three pointers made
+tpa,numeric,Three pointers attempted
+tp_pct,numeric,Three point percentage
+ftm,numeric,Free throws made
+fta,numeric,Free throws attempted
+ft_pct,numeric,Free throw percentage
+oreb,numeric,Offensive rebounds
+dreb,numeric,Defensive rebounds
+reb,numeric,Rebounds
+ast,numeric,Assists
+stl,numeric,Steals
+blk,numeric,Blocks
+to,numeric,Turnovers
+pf,numeric,Fouls
+pts,numeric,Points scored
+opp_fgm,numeric,Opponent field goals made
+opp_fga,numeric,Opponent field goals attempted
+opp_fg_pct,numeric,Opponent field goal percentage
+opp_tpm,numeric,Opponen three pointers made
+opp_tpa,numeric,Opponent three pointers attempted
+opp_tp_pct,numeric,Opponent three point percentage
+opp_ftm,numeric,Opponent free throws made
+opp_fta,numeric,Opponent free throws attempted
+opp_ft_pct,numeric,Opponent free throw percentage
+opp_oreb,numeric,Opponent offensive rebounds
+opp_dreb,numeric,Opponent defensive rebounds
+opp_reb,numeric,Opponent rebounds
+opp_ast,numeric,Opponent assists
+opp_stl,numeric,Opponent steals
+opp_blk,numeric,Opponent blocks
+opp_to,numeric,Opponent turnovers
+opp_pf,numeric,Opponent fouls
+opp_pts,numeric,Opponent points scored
+pts_scored,numeric,Points scored
+pts_allowed,numeric,Points allowed
+adj_o,numeric,Adjusted offensive rating (points scored per 100 possessions)
+adj_d,numeric,Adjusted defensive rating (points allowed per 100 possessions)
+off_ppp,numeric,Points per possession (unadjusted; raw)
+off_efg,numeric,Effective fied goal percentage
+off_to,numeric,Turnover rate
+off_or,numeric,Offensive rebound rate
+off_ftr,numeric,Free throw rate
+def_ppp,numeric,Points allowed per possession (unadjusted; raw)
+def_efg,numeric,Opponent effective field goal percentage
+def_to,numeric,Opponent turnover rate
+def_or,numeric,Opponent offensive rebound rate
+def_ftr,numeric,Opponent free throw rate
+game_score,numeric,Game score
+tempo,numeric,Possessions
+avg_marg,numeric,Average margin
+games,integer,Games played on split

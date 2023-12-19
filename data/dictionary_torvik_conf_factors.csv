@@ -1,0 +1,31 @@
+field,data_type,description
+conf,character,Conference
+games,numeric,Games played
+wins,numeric,Wins
+losses,numeric,Losses
+adj_t,numeric,Adjusted tempo (possessions per game)
+adj_o,numeric,Adjusted offense (points scored per 100 possessions)
+adj_d,numeric,Adjusted defense (points allowed per 100 possessions)
+barthag,numeric,Barthag rating (prob. of beating average team on neutral court)
+efg,numeric,Effective field goal percentage
+def_efg,numeric,Opponent effective field goal percentage
+ftr,numeric,Free throw rate
+def_ftr,numeric,Opponent free throw rate
+oreb_rate,numeric,Offensive rebound rate
+dreb_rate,numeric,Opponent offensive rebound rate
+tov_rate,numeric,Turnover rate
+def_tov_rate,numeric,Opponent turnover rate
+two_pt_pct,numeric,Two point percentage
+three_pt_pct,numeric,Three point percentage
+ft_pct,numeric,Free throw percentage
+def_two_pt_pct,numeric,Opponent two point percentage
+def_three_pt_pct,numeric,Opponent three point percentage
+def_ft_pct,numeric,Opponent free throw percentage
+three_fg_rate,numeric,3FG / 100 FGA
+def_three_fg_rate,numeric,Opponent 3FG / 100 FGA
+block_rate,numeric,Block rate
+block_rate_allowed,numeric,Opponent block rate
+assist_rate,numeric,Assist rate
+def_assist_rate,numeric,Opponent assist rate
+wab,numeric,Wins above/below bubble expectation
+year,numeric,Year

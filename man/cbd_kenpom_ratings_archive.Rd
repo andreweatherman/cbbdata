@@ -8,7 +8,7 @@ cbd_kenpom_ratings_archive(...)
 }
 \arguments{
 \item{...}{OPTIONAL. To load the complete data set, pass no arguments through
-to the function. Else, you can filter on  `team`, `conf`, `year`, or any
+to the function. Else, you can filter on  \code{team}, \code{conf}, \code{year}, or any
 other data column.}
 }
 \description{
@@ -16,7 +16,7 @@ Historical KenPom ratings + rankings from 2012-Present.
 }
 \details{
 Requires KenPom authorization. You can authorize with
-`cbd_kenpom_authorization`.
+\code{cbd_kenpom_authorization}.
 }
 \examples{
 \donttest{try(cbd_kenpom_ratings_archive(year = 2023))}

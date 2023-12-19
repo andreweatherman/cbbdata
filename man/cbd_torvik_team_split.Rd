@@ -9,10 +9,10 @@ cbd_torvik_team_split(split, ...)
 \arguments{
 \item{split}{The data will default to splitting on game result. If you want
 to split on a different level, you must specify. You can split on
-`location`, `game_type`, `month`, or `game_result` (default).}
+\code{location}, \code{game_type}, \code{month}, or \code{game_result}.}
 
 \item{...}{OPTIONAL. To load the complete data set, pass no arguments through
-to the function. Else, you can filter on  `year`, `team`, `conf`, or any
+to the function. Else, you can filter on  \code{year}, \code{team}, \code{conf}, or any
 other data column.}
 }
 \description{

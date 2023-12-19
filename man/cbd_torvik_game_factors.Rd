@@ -8,7 +8,7 @@ cbd_torvik_game_factors(...)
 }
 \arguments{
 \item{...}{OPTIONAL. To load the complete data set, pass no arguments through
-to the function. Else, you can filter on  `year`, `team`, `date`, `conf`,
+to the function. Else, you can filter on  \code{year}, \code{team}, \code{date}, \code{conf},
 or any other data column.}
 }
 \description{

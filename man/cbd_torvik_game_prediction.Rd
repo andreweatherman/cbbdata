@@ -14,7 +14,7 @@ cbd_torvik_game_prediction(team, opp, date = NULL, location = "H")
 \item{date}{Date of game and must be a consecutive string in YYYYMMDD format
 (defaults to current day)}
 
-\item{location}{Location of game relative to `team` ('H', 'A', or 'N'),
+\item{location}{Location of game relative to \code{team} ('H', 'A', or 'N'),
 defaults to 'H' (home)}
 }
 \value{

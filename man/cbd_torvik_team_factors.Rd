@@ -11,7 +11,8 @@ cbd_torvik_team_factors(
   quad = "4",
   top = 0,
   start = NULL,
-  end = NULL
+  end = NULL,
+  no_bias = FALSE
 )
 }
 \arguments{
@@ -33,6 +34,9 @@ games.}
 \item{start}{Game start date (YYYYMMDD format).}
 
 \item{end}{Game end date (YYYYMMDD format).}
+
+\item{no_bias}{Logical. \code{TRUE} will display T-Rank ratings with no preseason
+bias/weight.}
 }
 \value{
 Returns a tibble with four factor (and other!) data.

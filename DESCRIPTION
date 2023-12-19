@@ -1,6 +1,6 @@
 Package: cbbdata
 Type: Package
-Title: Interfaces the CBBData API
+Title: API for College Basketball Data
 Version: 0.1.0
 Authors@R: person("Andrew", "Weatherman", email = "andrew@aweatherman.com", 
   role = c("aut", "cre"))
@@ -25,3 +25,4 @@ Imports:
     rlang,
     stringr,
     usethis
+Roxygen: list(markdown = TRUE)

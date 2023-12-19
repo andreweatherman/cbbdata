@@ -15,17 +15,20 @@
 #'   games.
 #' @param start Game start date (YYYYMMDD format).
 #' @param end Game end date (YYYYMMDD format).
+#' @param no_bias Logical. `TRUE` will display T-Rank ratings with no preseason
+#'   bias/weight.
 #' @import dplyr
 #' @import httr
 #' @importFrom withr local_options
 #' @importFrom cli cli_abort
 #' @importFrom readr read_csv
 #' @importFrom magrittr %>%
+#' @importFrom glue glue
 #' @examples
 #' \donttest{try(cbd_torvik_team_factors(2023, start = '20230101'))}
 #'
 #' @export
-cbd_torvik_team_factors <- function(year, venue = "all", game_type = "all", quad = "4", top = 0, start = NULL, end = NULL) {
+cbd_torvik_team_factors <- function(year, venue = "all", game_type = "all", quad = "4", top = 0, start = NULL, end = NULL, no_bias = FALSE) {
 
   suppressWarnings({
     # default PC user-agent gets blocked on barttorvik.com
@@ -33,6 +36,10 @@ cbd_torvik_team_factors <- function(year, venue = "all", game_type = "all", quad
 
     if (!(is.numeric(year) && nchar(year) == 4 && year >= 2008)) {
       cli_abort("Enter a valid year as a number (YYYY). Data only goes back to 2008!")
+    }
+
+    if (no_bias) {
+      start <- glue('{year-1}-11-01')
     }
 
     cbbdata:::validate_input(venue, c('all', 'home', 'away', 'neutral', 'road'), "Please input correct venue value (see details)")

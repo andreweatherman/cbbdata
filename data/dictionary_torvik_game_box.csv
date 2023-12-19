@@ -1,0 +1,49 @@
+field,data_type,description
+game_id,character,Game ID
+date,Date,Date
+year,numeric,Year
+type,character,Game type
+location,character,Location
+result,character,Game result
+team,character,Team
+conf,character,Conference
+opp,character,Opponent
+opp_conf,character,Opponent conference
+min,numeric,Game minutes
+pos,numeric,Game possessions
+fgm,numeric,Field goals made
+fga,numeric,Field goals attempted
+fg_pct,numeric,Field goal percentage
+tpm,numeric,Three pointers made
+tpa,numeric,Three pointers attempted
+tp_pct,numeric,Three point percentage
+ftm,numeric,Free throws made
+fta,numeric,Free throws attempted
+ft_pct,numeric,Free throw percentage
+oreb,numeric,Offensive rebounds
+dreb,numeric,Defensive rebounds
+reb,numeric,Rebounds
+ast,numeric,Assists
+stl,numeric,Steals
+blk,numeric,Blocks
+to,numeric,Turnovers
+pf,numeric,Fouls
+pts,numeric,Points scored
+opp_fgm,numeric,Opponent field goals made
+opp_fga,numeric,Opponent field goals attempted
+opp_fg_pct,numeric,Opponent field goal percentage
+opp_tpm,numeric,Opponen three pointers made
+opp_tpa,numeric,Opponent three pointers attempted
+opp_tp_pct,numeric,Opponent three point percentage
+opp_ftm,numeric,Opponent free throws made
+opp_fta,numeric,Opponent free throws attempted
+opp_ft_pct,numeric,Opponent free throw percentage
+opp_oreb,numeric,Opponent offensive rebounds
+opp_dreb,numeric,Opponent defensive rebounds
+opp_reb,numeric,Opponent rebounds
+opp_ast,numeric,Opponent assists
+opp_stl,numeric,Opponent steals
+opp_blk,numeric,Opponent blocks
+opp_to,numeric,Opponent turnovers
+opp_pf,numeric,Opponent fouls
+opp_pts,numeric,Opponent points scored

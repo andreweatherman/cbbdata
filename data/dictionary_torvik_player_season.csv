@@ -1,0 +1,67 @@
+field,data_type,description
+player,character,Player
+pos,character,Position (estimated)
+exp,character,Class experience
+num,numeric,Number
+hgt,character,Height
+inches,numeric,Height in inches
+team,character,Team
+conf,character,Conference
+g,numeric,Games played
+min,numeric,Minutes rate
+mpg,numeric,Minutes per game
+ppg,numeric,Points per game
+oreb,numeric,Offensive rebounds per game
+dreb,numeric,Defensive rebounds per game
+rpg,numeric,Rebounds per game
+apg,numeric,Assists per game
+tov,numeric,Turnovers per game
+ast_to,numeric,Assist to turnover ratio
+spg,numeric,Steals per game
+bpg,numeric,Blocks per game
+usg,numeric,Usage rate
+ortg,numeric,Offensive rating
+efg,numeric,Effective field goal percentage
+ts,numeric,True shooting percentage
+year,numeric,Year
+id,numeric,Player ID
+fgm,numeric,FGs made
+ftm,numeric,FTs made
+fta,numeric,FTs attempted
+ft_pct,numeric,FT percentage
+two_m,numeric,2FG made
+two_a,numeric,2FG attempted
+two_pct,numeric,2FG percentage
+three_m,numeric,3FG made
+three_a,numeric,3FG attempted
+three_pct,numeric,3FG percentage
+dunk_m,numeric,Dunks made
+dunk_a,numeric,Dunks attempted
+dunk_pct,numeric,Dunk percentage
+rim_m,numeric,At-rim shots made
+rim_a,numeric,At-rim shots attempted
+rim_pct,numeric,At-rim shots percentage
+mid_m,numeric,Mid-range shots made
+mid_a,numeric,Mid-range shots attempted
+mid_pct,numeric,Mid-range percentage
+porpag,numeric,Points above replacement player at that usage
+dporpag,numeric,Defensive PORPAG
+adj_oe,numeric,Adjusted offensive rating
+drtg,numeric,Defensive rating
+adj_de,numeric,Adjusted defensive rating
+stops,numeric,Estimated defensive stops made by player
+obpm,numeric,Offensive box plus/minus
+dbpm,numeric,Defensive box plus/minus
+bpm,numeric,Box plus/minus
+oreb_rate,numeric,Offensive rebound rate
+dreb_rate,numeric,Defensive rebound rate
+ast,numeric,Assist rate
+to,numeric,Turnover rate
+blk,numeric,Block rate
+stl,numeric,Steal rate
+ftr,numeric,Free throw rate
+pfr,numeric,Personal foul rate
+rec,numeric,Recruit composite [0-100]
+pick,numeric,Draft pick
+fga,numeric,FGs attempted
+fg_pct,numeric,FG percentage

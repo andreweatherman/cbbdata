@@ -2,7 +2,29 @@
 #'
 #' Returns a tibble with current NCAA Tournament resume data
 #'
-#' @returns Returns a tibble with current resume data, including NET
+#' @returns Returns a tibble with the following columns:
+  #' |**Column**   |**Description**                                                     |
+  #' |:--------|:---------------------------------------------------------------|
+  #' |seed     |NCAA Seed                                                       |
+  #' |team     |Team                                                            |
+  #' |conf     |Conference                                                      |
+  #' |barthag  |Barthag rating (prob. of beating average team on neutral court) |
+  #' |t_rank   |Barthag rank                                                    |
+  #' |net      |NCAA Net rank                                                   |
+  #' |elo      |ELO rank (Barttorvik)                                           |
+  #' |resume   |Resume rank (Barttorvik)                                        |
+  #' |wab_rk   |Wins Above Bubble raking                                        |
+  #' |wab      |Wins above/below bubble team expectation                        |
+  #' |quad1    |Quad 1 record (current)                                         |
+  #' |quad2    |Quad 2 record (current)                                         |
+  #' |quad3    |Quad 3 record (current)                                         |
+  #' |quad4    |Quad 4 record (current)                                         |
+  #' |adj_o    |Adjusted offense (points per 100 possessions)                   |
+  #' |adj_o_rk |Adjusted offense rank                                           |
+  #' |adj_d    |Adjusted defense (points allowed per 100 possessions)           |
+  #' |adj_d_rk |Adjusted defense rank                                           |
+  #' |adj_t    |Adjusted tempo (possessions per game)                           |
+  #' |adj_t_rk |Adjusted tempo rank                                             |
 #' @import dplyr
 #' @import httr
 #' @importFrom withr local_options

@@ -7,7 +7,29 @@
 cbd_torvik_current_resume()
 }
 \value{
-Returns a tibble with current resume data, including NET
+Returns a tibble with the following columns:\tabular{ll}{
+   \strong{Column} \tab \strong{Description} \cr
+   seed \tab NCAA Seed \cr
+   team \tab Team \cr
+   conf \tab Conference \cr
+   barthag \tab Barthag rating (prob. of beating average team on neutral court) \cr
+   t_rank \tab Barthag rank \cr
+   net \tab NCAA Net rank \cr
+   elo \tab ELO rank (Barttorvik) \cr
+   resume \tab Resume rank (Barttorvik) \cr
+   wab_rk \tab Wins Above Bubble raking \cr
+   wab \tab Wins above/below bubble team expectation \cr
+   quad1 \tab Quad 1 record (current) \cr
+   quad2 \tab Quad 2 record (current) \cr
+   quad3 \tab Quad 3 record (current) \cr
+   quad4 \tab Quad 4 record (current) \cr
+   adj_o \tab Adjusted offense (points per 100 possessions) \cr
+   adj_o_rk \tab Adjusted offense rank \cr
+   adj_d \tab Adjusted defense (points allowed per 100 possessions) \cr
+   adj_d_rk \tab Adjusted defense rank \cr
+   adj_t \tab Adjusted tempo (possessions per game) \cr
+   adj_t_rk \tab Adjusted tempo rank \cr
+}
 }
 \description{
 Returns a tibble with current NCAA Tournament resume data

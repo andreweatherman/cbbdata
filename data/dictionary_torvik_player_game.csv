@@ -1,0 +1,53 @@
+field,data_type,description
+date,Date,Date
+player,character,Player
+exp,character,Class experience
+loc,character,Game location
+type,character,Game type
+team,character,Team
+opp,character,Opponent
+conf,character,Confernece
+opp_conf,character,Opponent conference
+result,character,Game result
+min,numeric,Minutes played
+pts,numeric,Points scored
+two_m,numeric,2FG made
+two_a,numeric,2FG attempted
+three_m,numeric,3FG made
+three_a,numeric,3FG attempted
+ftm,numeric,FT made
+fta,numeric,FT attempted
+oreb,numeric,Offensive rebounds
+dreb,numeric,Defensive rebounds
+reb,numeric,Rebounds
+ast,numeric,Assists
+tov,numeric,Turnovers
+ast_tov,numeric,Assist to turnover ratio
+stl,numeric,Steals
+blk,numeric,Blocks
+pf,numeric,Fouls
+ortg,numeric,Offensive rating
+usg,numeric,Usage rating
+fg_pct,numeric,FG percentage
+efg,numeric,Effective FG percentage
+ts,numeric,True shooting percentage
+dunk_m,numeric,Dunks made
+dunk_a,numeric,Dunks attempted
+rim_m,numeric,At-rim shots made
+rim_a,numeric,At-rim shots attempted
+mid_m,numeric,Mid-range shots made
+mid_a,numeric,Mid-range shots attempted
+or_pct,numeric,Offensive rebound rate
+dr_pct,numeric,Defensive rebound rate
+ast_pct,numeric,Assist rate
+to_pct,numeric,Turnover rate
+stl_pct,numeric,Steal rate
+blk_pct,numeric,Block rate
+bpm,numeric,Box plus/minus
+obpm,numeric,Offensive box plus/minus
+dbpm,numeric,Defensive box plus/minus
+net,numeric,Net box plus/minus
+poss,numeric,Possessions played
+id,numeric,Player ID
+game_id,character,Game ID
+year,numeric,Year

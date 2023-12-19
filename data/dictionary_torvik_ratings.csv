@@ -1,0 +1,20 @@
+field,data_type,description
+team,character,Team
+conf,character,Conference
+barthag,numeric,Barthag rating (prob. of beating average team on neutral court)
+barthag_rk,integer,Barthag rank
+adj_o,numeric,Adjusted offense (points per 100 possessions)
+adj_o_rk,integer,Adjusted offense rank
+adj_d,numeric,Adjusted defense (points allowed per 100 possessions)
+adj_d_rk,integer,Adjusted defense rank
+adj_t,numeric,Adjusted tempo (possessions per game)
+adj_t_rk,integer,Adjusted tempo rank
+wab,numeric,Wins above/below bubble expectation
+nc_elite_sos,numeric,"Percentage of games an ""elite"" team would be expected to lose in non-con"
+nc_fut_sos,numeric,Non-conference SOS in games not yet played
+nc_cur_sos,numeric,Non-conference SOS in games played
+ov_elite_sos,numeric,"Percenatge of games an ""elite"" team would be expected to lose in all games"
+ov_fut_sos,numeric,Overall SOS in games not yet played
+ov_cur_sos,numeric,Overall SOS in games played
+seed,numeric,NCAA seed
+year,numeric,Year

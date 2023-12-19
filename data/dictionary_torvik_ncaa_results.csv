@@ -1,0 +1,20 @@
+field,data_type,description
+rk,numeric,Rank (ordered by PAKE)
+team,character,Team
+pake,numeric,Performance against KenPom expectation
+pase,numeric,Performance against seed expectation
+wins,numeric,Wins
+loss,numeric,Losses
+w_percent,numeric,Win percentage
+r64,numeric,Round of 64 appearances
+r32,numeric,Round of 32 appearances
+s16,numeric,Sweet 16 appearances
+e8,numeric,Elite 8 appearances
+f4,numeric,Final Four appearances
+f2,numeric,Championship game appearances
+champ,numeric,Championships won
+top2,numeric,Number of top 2 seeds
+f4_percent,numeric,Probability of making a Final Four
+champ_percent,numeric,Probability of winning a championship
+min_year,numeric,Minimum year
+max_year,numeric,Maximum year

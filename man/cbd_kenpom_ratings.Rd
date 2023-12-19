@@ -8,15 +8,16 @@ cbd_kenpom_ratings(...)
 }
 \arguments{
 \item{...}{OPTIONAL. To load the complete data set, pass no arguments through
-to the function. Else, you can filter on  `team`, `conf`, `year`, or any
-other data column.}
+to the function. Else, you can filter on  \code{team}, \code{conf}, \code{year}, or any
+other data column.
+|}
 }
 \description{
 Pulls year-end KenPom ratings and adjusted efficiencies from 2001-Present.
 }
 \details{
 Requires KenPom authorization. You can authorize with
-`cbd_kenpom_authorization`.
+\code{cbd_kenpom_authorization}.
 }
 \examples{
 \donttest{try(cbd_kenpom_ratings(year = 2023))}

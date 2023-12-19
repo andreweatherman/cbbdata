@@ -1,0 +1,24 @@
+field,data_type,description
+year,numeric,Year
+rk,numeric,KenPom rank
+team,character,Team
+conf,character,Conference
+w_l,character,Record
+adj_em,numeric,Adjusted efficiency margin (projected margin vs. average team on neutral court)
+adj_o,numeric,Adjusted offense (points per 100 possessions)
+adj_o_rk,numeric,Adjusted offense rank
+adj_d,numeric,Adjusted defense (points allowed per 100 possessions)
+adj_d_rk,numeric,Adjusted defense rank
+adj_t,numeric,Adjusted tempo (possessions per game)
+adj_t_rk,numeric,Adjusted tempo rank
+luck,numeric,"""Luck"" rating"
+luck_rk,numeric,"""Luck"" rank"
+sos_adj_em,numeric,Adj. EM of opppnents (SOS)
+sos_adj_em_rk,numeric,KenPom rank of opponents (SOS)
+sos_opp_o,numeric,Adjusted offense of opponents (SOS)
+sos_opp_o_rk,numeric,Adjusted offense rank of opponents (SOS)
+sos_opp_d,numeric,Adjusted defense of opponents (SOS)
+sos_opp_d_rk,numeric,Adjusted defense rank of opponents (SOS)
+ncsos_adj_em,numeric,Adj. EM of non-conf. opponents (SOS)
+ncsos_adj_em_rk,numeric,Adj. EM rank of non-conf. opponents (SOS)
+ncaa_seed,numeric,NCAA seed

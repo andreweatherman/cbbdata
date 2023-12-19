@@ -2,22 +2,22 @@
 % Please edit documentation in R/gt_theme_athletic.R
 \name{gt_theme_athletic}
 \alias{gt_theme_athletic}
-\title{The Athletic `gt` Table Theme}
+\title{The Athletic \code{gt} Table Theme}
 \usage{
 gt_theme_athletic(gt_object, ...)
 }
 \arguments{
-\item{gt_object}{An existing gt table object of class `gt_tbl`}
+\item{gt_object}{An existing gt table object of class \code{gt_tbl}}
 
-\item{...}{Optional additional arguments to `gt::table_options()`}
+\item{...}{Optional additional arguments to \code{gt::table_options()}}
 }
 \value{
 Returns data with an appended HTML column.
 }
 \description{
-A theme for styling `gt` tables similar to The Athletic.
+A theme for styling \code{gt} tables similar to The Athletic.
 }
 \examples{
-\donttest{try(mtcars \%>\% head() \%>\% gt() \%>\% gt_theme_athletic())}
+\dontrun{try(mtcars \%>\% head() \%>\% gt::gt() \%>\% cbbdata::gt_theme_athletic())}
 
 }

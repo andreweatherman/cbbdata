@@ -1,0 +1,32 @@
+field,data_type,description
+date,Date,Date
+type,character,Game type
+team,character,Team
+conf,character,Conference
+opp,character,Opponent
+opp_conf,character,Opponent conference
+loc,character,Game location
+result,character,Game result
+pts_scored,numeric,Points scored
+pts_allowed,numeric,Points allowed
+adj_o,numeric,Adjusted offensive rating (points scored per 100 possessions)
+adj_d,numeric,Adjusted defensive rating (points allowed per 100 possessions)
+off_ppp,numeric,Points per possession (unadjusted; raw)
+off_efg,numeric,Effective fied goal percentage
+off_to,numeric,Turnover rate
+off_or,numeric,Offensive rebound rate
+off_ftr,numeric,Free throw rate
+def_ppp,numeric,Points allowed per possession (unadjusted; raw)
+def_efg,numeric,Opponent effective field goal percentage
+def_to,numeric,Opponent turnover rate
+def_or,numeric,Opponent offensive rebound rate
+def_ftr,numeric,Opponent free throw rate
+game_score,numeric,Game score
+season,numeric,Season
+tempo,numeric,Game possessions
+game_id,character,Game ID
+coach,character,Coach (team)
+opp_coach,character,Opponent coach
+year,numeric,Year
+location,character,Game location
+avg_marg,numeric,Average margin

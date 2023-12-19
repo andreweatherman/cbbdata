@@ -15,7 +15,7 @@ cbd_gt_logos(
 \arguments{
 \item{data}{Pass through your plotting data}
 
-\item{team_column}{Indicate which column contains your `team` variable}
+\item{team_column}{Indicate which column contains your \code{team} variable}
 
 \item{logo_column}{Indicates the name of the HTML column}
 
@@ -35,12 +35,12 @@ for table plotting.
 I really hate putting team logos and names in separate columns,
 and this helper function will add team logos or wordmarks and create
 the HTML code to render in logos and teams in the same column for tables.
-If you are using `gt` to plot, you must use `fmt_markdown(team_logo)` to
-render in the HTML. Set `logo_column` to your `team` variable if you wish
-to overwrite your `team` column with the logo HTML.
+If you are using \code{gt} to plot, you must use \code{fmt_markdown(team_logo)} to
+render in the HTML. Set \code{logo_column} to your \code{team} variable if you wish
+to overwrite your \code{team} column with the logo HTML.
 }
 \examples{
-\donttest{try(cbd_torvik_ratings(year=2023) \%>\% head() \%>\% select(team, conf) \%>\%
-cbd_gt_logos(team) \%>\% gt() \%>\% fmt_markdown(team_logo))}
+\dontrun{try(cbd_torvik_ratings(year=2023) \%>\% head() \%>\% select(team, conf) \%>\%
+cbbdata::cbd_gt_logos(team, team) \%>\% gt::gt() \%>\% gt::fmt_markdown(team))}
 
 }

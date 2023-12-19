@@ -8,7 +8,7 @@
 #' @import gt
 #' @importFrom magrittr %>%
 #' @examples
-#' \donttest{try(mtcars %>% head() %>% gt() %>% gt_theme_athletic())}
+#' \dontrun{try(mtcars %>% head() %>% gt::gt() %>% cbbdata::gt_theme_athletic())}
 #'
 #' @export
 gt_theme_athletic <- function(gt_object, ...) {

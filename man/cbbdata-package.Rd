@@ -4,7 +4,7 @@
 \name{cbbdata-package}
 \alias{cbbdata}
 \alias{cbbdata-package}
-\title{cbbdata: Interfaces the CBBData API}
+\title{cbbdata: API for College Basketball Data}
 \description{
 Provides direct access to clean and tidy college basketball data using the CBBData API.
 }

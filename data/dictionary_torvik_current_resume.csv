@@ -1,0 +1,21 @@
+field,data_type,description
+seed,numeric,Projected NCAA seed
+team,character,Team
+conf,character,Conference
+barthag,numeric,Barthag rating (prob. of beating average team on neutral court)
+t_rank,integer,Barthag rank
+net,integer,NCAA NET rank
+elo,numeric,Elo rank (T-Rank)
+resume,numeric,Resume rank (T-Rank)
+wab_rk,numeric,Wins above/below bubble expectation rank
+wab,numeric,Wins above/below bubble expectation
+quad1,character,Quadrant 1 record (current)
+quad2,character,Quadrant 2 record (current)
+quad3,character,Quadrant 3 record (current)
+quad4,character,Quadrant 4 record (current)
+adj_o,numeric,Adjusted offense (points scored per 100 possessions)
+adj_o_rk,integer,Adjusted offense rank
+adj_d,numeric,Adjusted defense (points allowed per 100 possessions)
+adj_d_rk,integer,Adjusted defense rank
+adj_t,numeric,Adjusted tempo (possessions per game)
+adj_t_rk,integer,Adjusted tempo rank
