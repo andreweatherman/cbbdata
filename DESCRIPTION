@@ -26,3 +26,4 @@ Imports:
     stringr,
     usethis
 Roxygen: list(markdown = TRUE)
+URL: https://andreweatherman.github.io/cbbdata/

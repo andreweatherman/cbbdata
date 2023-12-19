@@ -1,82 +1,85 @@
-url: http://www.aweatherman.com/cbbdata
+url: https://andreweatherman.github.io/cbbdata/
 template:
   bootstrap: 5
   theme: breeze-light
   bslib:
-    base_font: {google: "Jost"}
-    heading_font: {google: "Oswald"}
-    code_font: {google: "JetBrains Mono"}
+    base_font:
+      google: Jost
+    heading_font:
+      google: Oswald
+    code_font:
+      google: JetBrains Mono
   twitter:
-    creator: "@andreweatherman"
+    creator: '@andreweatherman'
     card: summary_large_image
-
 navbar:
   structure:
-    left:  [reference, news]
-    right: [search, github]
-
+    left:
+    - reference
+    - news
+    right:
+    - search
+    - github
 home:
   title: CBBData R Package
   links:
   - text: Andrew's Twitter
     href: https://twitter.com/andreweatherman
-    target: "_blank"
+    target: _blank
   - text: Andrew's Personal Site
     href: https://www.aweatherman.com/
-    target: "_blank"
-
+    target: _blank
 reference:
-  - title: "Metric Ratings"
-    desc: "Functions for grabbing metric ratings from T-Rank"
-    contents:
-    - cbd_torvik_ratings
-    - cbd_torvik_ratings_archive
-    - cbd_torvik_team_factors
-    - cbd_kenpom_ratings
-    - cbd_kenpom_ratings_archive
-  - title: "Player Data"
-    desc: "Functions for grabbing player-level data"
-    contents:
-    - cbd_torvik_player_game
-    - cbd_torvik_player_season
-    - cbd_torvik_player_split
-  - title: "Team + Conference Data"
-    desc: "Functions for grabbing team- and conference-level data"
-    contents:
-    - cbd_torvik_team_split
-    - cbd_torvik_team_history
-    - cbd_torvik_conf_factors
-  - title: "Game Data"
-    desc: "Functions for grabbing game-level data"
-    contents:
-    - cbd_torvik_game_box
-    - cbd_torvik_game_factors
-    - cbd_torvik_game_stats
-    - cbd_torvik_season_schedule
-  - title: "Predictions"
-    desc: "Functions for running T-Rank predictions and Monte Carlo simulations"
-    contents:
-    - cbd_torvik_game_prediction
-    - cbd_torvik_season_prediction
-    - cbd_torvik_season_simulation
-  - title: "Tournament Results + Resumes"
-    desc: "Functions for grabbing historical tournament performance and team sheets"
-    contents:
-    - cbd_torvik_current_resume
-    - cbd_torvik_ncaa_results
-    - cbd_torvik_ncaa_sheets
-    - cbd_torvik_resume_database
-    - cbd_torvik_similar_resumes
-  - title: "gt Utilities"
-    desc: "Utility functions for gt tables"
-    contents:
-    - gt_theme_athletic
-    - cbd_gt_logos
-  - title: "Other"
-    contents:
-    - cbd_create_account
-    - cbd_login
-    - cbd_kenpom_authorization
-    - cbd_teams
-
+- title: Metric Ratings
+  desc: Functions for grabbing metric ratings from T-Rank
+  contents:
+  - cbd_torvik_ratings
+  - cbd_torvik_ratings_archive
+  - cbd_torvik_team_factors
+  - cbd_kenpom_ratings
+  - cbd_kenpom_ratings_archive
+- title: Player Data
+  desc: Functions for grabbing player-level data
+  contents:
+  - cbd_torvik_player_game
+  - cbd_torvik_player_season
+  - cbd_torvik_player_split
+- title: Team + Conference Data
+  desc: Functions for grabbing team- and conference-level data
+  contents:
+  - cbd_torvik_team_split
+  - cbd_torvik_team_history
+  - cbd_torvik_conf_factors
+- title: Game Data
+  desc: Functions for grabbing game-level data
+  contents:
+  - cbd_torvik_game_box
+  - cbd_torvik_game_factors
+  - cbd_torvik_game_stats
+  - cbd_torvik_season_schedule
+- title: Predictions
+  desc: Functions for running T-Rank predictions and Monte Carlo simulations
+  contents:
+  - cbd_torvik_game_prediction
+  - cbd_torvik_season_prediction
+  - cbd_torvik_season_simulation
+- title: Tournament Results + Resumes
+  desc: Functions for grabbing historical tournament performance and team sheets
+  contents:
+  - cbd_torvik_current_resume
+  - cbd_torvik_ncaa_results
+  - cbd_torvik_ncaa_sheets
+  - cbd_torvik_resume_database
+  - cbd_torvik_similar_resumes
+- title: gt Utilities
+  desc: Utility functions for gt tables
+  contents:
+  - gt_theme_athletic
+  - cbd_gt_logos
+- title: Other
+  contents:
+  - cbd_create_account
+  - cbd_login
+  - cbd_kenpom_authorization
+  - cbd_teams
 
