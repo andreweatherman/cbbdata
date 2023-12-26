@@ -40,8 +40,7 @@ gt_theme_athletic <- function(gt_object, ...) {
         font = gt::google_font('Work Sans'),
         weight = 650,
         size = px(12),
-        transform = 'uppercase',
-        align = 'center'
+        transform = 'uppercase'
       )
     ) %>%
     gt::tab_style(
