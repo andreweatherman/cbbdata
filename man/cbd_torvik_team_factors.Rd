@@ -5,7 +5,7 @@
 \title{Four Factor Team Splits}
 \usage{
 cbd_torvik_team_factors(
-  year,
+  year = NULL,
   venue = "all",
   game_type = "all",
   quad = "4",

@@ -6,12 +6,15 @@
 \alias{cbbdata-package}
 \title{cbbdata: API for College Basketball Data}
 \description{
+\if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
+
 Provides direct access to clean and tidy college basketball data using the CBBData API.
 }
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://andreweatherman.github.io/cbbdata/}
+  \item \url{https://cbbdata.aweatherman.com/}
+  \item Report bugs at \url{https://github.com/andreweatherman/cbbdata}
 }
 
 }

@@ -22,24 +22,32 @@
 #' @importFrom withr local_options
 #' @importFrom cli cli_abort
 #' @importFrom readr read_csv
+#' @importFrom lubridate year
 #' @importFrom magrittr %>%
 #' @importFrom glue glue
 #' @examples
 #' \donttest{try(cbd_torvik_team_factors(2023, start = '20230101'))}
 #'
 #' @export
-cbd_torvik_team_factors <- function(year, venue = "all", game_type = "all", quad = "4", top = 0, start = NULL, end = NULL, no_bias = FALSE) {
+cbd_torvik_team_factors <- function(year = NULL, venue = "all", game_type = "all", quad = "4", top = 0, start = NULL, end = NULL, no_bias = FALSE) {
 
   suppressWarnings({
     # default PC user-agent gets blocked on barttorvik.com
     local_options(HTTPUserAgent='CBB-DATA')
 
-    if (!(is.numeric(year) && nchar(year) == 4 && year >= 2008)) {
-      cli_abort("Enter a valid year as a number (YYYY). Data only goes back to 2008!")
-    }
-
     if (no_bias) {
       start <- glue('{year-1}-11-01')
+    }
+
+    # get conf. info to merge with
+
+    if (is.null(year)) {
+      parsed_year <- ifelse(is.null(start), lubridate::year(end), lubridate::year(start))
+      conf_info <- cbbdata::cbd_torvik_ratings(year = parsed_year) %>% distinct(team, conf)
+    }
+
+    else {
+      cbbdata::cbd_torvik_ratings(year = year) %>% distinct(team, conf)
     }
 
     cbbdata:::validate_input(venue, c('all', 'home', 'away', 'neutral', 'road'), "Please input correct venue value (see details)")
@@ -50,9 +58,6 @@ cbd_torvik_team_factors <- function(year, venue = "all", game_type = "all", quad
     v <- switch(venue, all = "All", home = "H", away = "A", neutral = "N", road = "A-N")
     t <- switch(game_type, all = "All", nc = "N", conf = "C", reg = "R", post = "P", ncaa = "T")
     q <- switch(quad, '0' = "1", '1' = "2", '2' = "3", '3' = "4", '4' = "5")
-
-    # get conf. info to merge with
-    conf_info <- cbbdata::cbd_torvik_ratings(year = year) %>% distinct(team, conf)
 
     # build url
     data_url <- cbbdata:::generate_trank_factors_url(year, q, v, t, top, start, end)

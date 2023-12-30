@@ -23,6 +23,7 @@ Imports:
     httr2,
     janitor,
     jsonlite,
+    lubridate,
     magrittr,
     purrr,
     readr,
