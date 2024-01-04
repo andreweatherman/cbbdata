@@ -4,7 +4,7 @@
 #'
 #' @returns Returns data with an appended HTML column.
 #' @param gt_object An existing gt table object of class `gt_tbl`
-#' @param ... Optional additional arguments to `gt::table_options()`
+#' @param ... Optional additional arguments to [gt::tab_options()]
 #' @import gt
 #' @importFrom magrittr %>%
 #' @examples
