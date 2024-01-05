@@ -58,6 +58,7 @@ reference:
   - cbd_torvik_game_factors
   - cbd_torvik_game_stats
   - cbd_torvik_season_schedule
+  - cbd_add_net_quad
 - title: Predictions
   desc: Functions for running T-Rank predictions and Monte Carlo simulations
   contents:
@@ -72,11 +73,6 @@ reference:
   - cbd_torvik_ncaa_sheets
   - cbd_torvik_resume_database
   - cbd_torvik_similar_resumes
-- title: gt Utilities
-  desc: Utility functions for gt tables
-  contents:
-  - gt_theme_athletic
-  - cbd_gt_logos
 - title: Other
   contents:
   - cbd_create_account

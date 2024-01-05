@@ -47,7 +47,7 @@ cbd_torvik_team_factors <- function(year = NULL, venue = "all", game_type = "all
     }
 
     else {
-      cbbdata::cbd_torvik_ratings(year = year) %>% distinct(team, conf)
+      conf_info <- cbbdata::cbd_torvik_ratings(year = year) %>% distinct(team, conf)
     }
 
     cbbdata:::validate_input(venue, c('all', 'home', 'away', 'neutral', 'road'), "Please input correct venue value (see details)")
