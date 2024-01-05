@@ -3,7 +3,7 @@ pkgdown: 2.0.7
 pkgdown_sha: ~
 articles:
   release: release.html
-last_built: 2024-01-05T20:00Z
+last_built: 2024-01-05T20:08Z
 urls:
   reference: https://andreweatherman.github.io/cbbdata/reference
   article: https://andreweatherman.github.io/cbbdata/articles
