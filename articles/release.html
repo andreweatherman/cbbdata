@@ -96,10 +96,10 @@
 <p>Hello there! I’m Andrew Weatherman, an avid open-source R developer
 and a die-hard college basketball enthusiast. My journey with R began
 during COVID, and I am entirely self-taught. In 2022, I ventured into
-the realm of “real coding” and developed the <code>toRvik</code>
-package, a tool for accessing college basketball data. It was my first
-major project and, despite its success, presented a fair share of
-challenges in maintenance.</p>
+the realm of “real coding” and developed the <a href="https://www.torvik.dev/" class="external-link"><code>toRvik</code> package</a>, a tool
+for accessing college basketball data. It was my first major project
+and, despite its success, presented a fair share of challenges in
+maintenance.</p>
 <p>In May 2023, I embarked on a new project: <code>cbbdata</code>. This
 Flask-based API is designed to deliver comprehensive, up-to-date college
 basketball statistics faster and more efficiently than its predecessor,
@@ -130,23 +130,23 @@ love about this package. Here are some brief highlights:</p>
 <ul>
 <li><p><strong>Comprehensive Game-by-Game Logs:</strong> Access detailed
 box scores and advanced metrics for players and teams dating back to
-2008 (<code>cbd_torvik_player_game</code> and
-<code>cbd_torvik_game_box/factors</code>). You can further find per-game
-player and team splits on month, location, result, and game type factors
-(<code>cbd_torvik_player/team_split</code>).</p></li>
+2008 (<code><a href="../reference/cbd_torvik_player_game.html">cbd_torvik_player_game()</a></code> and
+<code><a href="../reference/cbd_torvik_game_box.html">cbd_torvik_game_box()</a></code>/ <code>cbd_torvik_factors()</code>).
+You can further find per-game player and team splits on month, location,
+result, and game type factors
+(<code>cbd_torvik_player()</code>/<code><a href="../reference/cbd_torvik_team_split.html">cbd_torvik_team_split()</a></code>).</p></li>
 <li><p><strong>Daily Updated NET Rankings:</strong> Find the latest NET
 rankings every morning
-(<code>cbd_torvik_current_resume</code>).</p></li>
+(<code><a href="../reference/cbd_torvik_current_resume.html">cbd_torvik_current_resume()</a></code>).</p></li>
 <li><p><strong>Game Predictions with Barttorvik:</strong> Simulate any
 matchup, real or otherwise, using our game prediction feature, powered
-by Barttorvik (<code>cbd_torvik_game_prediction</code>). It’s perfect
+by Barttorvik (<code><a href="../reference/cbd_torvik_game_prediction.html">cbd_torvik_game_prediction()</a></code>). It’s perfect
 for pre-game analyses and hypothetical scenario discussions.</p></li>
-<li><p><strong>Plot team logos with <code>gt</code>:</strong> Okay,
-sure, this one isn’t data-focused, but it’s perhaps my favorite
-function. Rebuild your <code>team</code> column with a logo and team
-name and render in a <code>gt</code> table. Gone are the days of
-awkwardly having separate columns for your logo and team name
-(<code>cbd_gt_logos</code>). <a href="https://x.com/andreweatherman/status/1730678741846704451?s=20" class="external-link">Just
+<li><p><strong>Plot team logos with <a href="gt.rstudio.com"><code>gt</code></a>:</strong> Okay, sure, this one
+isn’t data-focused, but it’s perhaps my favorite function. Rebuild your
+<code>team</code> column with a logo and team name and render in a
+<code>gt</code> table. Gone are the days of awkwardly having separate
+columns for your logo and team name (<code><a href="../reference/cbd_gt_logos.html">cbd_gt_logos()</a></code>). <a href="https://x.com/andreweatherman/status/1730678741846704451?s=20" class="external-link">Just
 like here!</a></p></li>
 </ul>
 </div>
