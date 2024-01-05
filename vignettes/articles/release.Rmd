@@ -15,7 +15,7 @@ library(cbbdata)
 
 ## Hi, I'm Andrew!
 
-Hello there! I’m Andrew Weatherman, an avid open-source R developer and a die-hard college basketball enthusiast. My journey with R began during COVID, and I am entirely self-taught. In 2022, I ventured into the realm of "real coding" and developed the `toRvik` package, a tool for accessing college basketball data. It was my first major project and, despite its success, presented a fair share of challenges in maintenance.
+Hello there! I’m Andrew Weatherman, an avid open-source R developer and a die-hard college basketball enthusiast. My journey with R began during COVID, and I am entirely self-taught. In 2022, I ventured into the realm of "real coding" and developed the [`toRvik` package](https://www.torvik.dev/), a tool for accessing college basketball data. It was my first major project and, despite its success, presented a fair share of challenges in maintenance.
 
 In May 2023, I embarked on a new project: `cbbdata`. This Flask-based API is designed to deliver comprehensive, up-to-date college basketball statistics faster and more efficiently than its predecessor, `toRvik`. `cbbdata` has been a significant undertaking, and I'm excited to finally share it with the community.
 
@@ -31,13 +31,13 @@ Currently, I'm pursuing a degree in Mathematics at the University of North Carol
 
 `cbbdata` ships with 26 functions, and there is a lot to love about this package. Here are some brief highlights:
 
-- **Comprehensive Game-by-Game Logs:** Access detailed box scores and advanced metrics for players and teams dating back to 2008 (`cbd_torvik_player_game` and `cbd_torvik_game_box/factors`). You can further find per-game player and team splits on month, location, result, and game type factors (`cbd_torvik_player/team_split`).
+- **Comprehensive Game-by-Game Logs:** Access detailed box scores and advanced metrics for players and teams dating back to 2008 (`cbd_torvik_player_game()` and `cbd_torvik_game_box()`/ `cbd_torvik_factors()`). You can further find per-game player and team splits on month, location, result, and game type factors (`cbd_torvik_player()`/`cbd_torvik_team_split()`).
 
-- **Daily Updated NET Rankings:** Find the latest NET rankings every morning (`cbd_torvik_current_resume`).
+- **Daily Updated NET Rankings:** Find the latest NET rankings every morning (`cbd_torvik_current_resume()`).
 
-- **Game Predictions with Barttorvik:** Simulate any matchup, real or otherwise, using our game prediction feature, powered by Barttorvik (`cbd_torvik_game_prediction`). It’s perfect for pre-game analyses and hypothetical scenario discussions.
+- **Game Predictions with Barttorvik:** Simulate any matchup, real or otherwise, using our game prediction feature, powered by Barttorvik (`cbd_torvik_game_prediction()`). It’s perfect for pre-game analyses and hypothetical scenario discussions.
 
-- **Plot team logos with `gt`:** Okay, sure, this one isn't data-focused, but it's perhaps my favorite function. Rebuild your `team` column with a logo and team name and render in a `gt` table. Gone are the days of awkwardly having separate columns for your logo and team name (`cbd_gt_logos`). [Just like here!](https://x.com/andreweatherman/status/1730678741846704451?s=20)
+- **Plot team logos with [`gt`](gt.rstudio.com):** Okay, sure, this one isn't data-focused, but it's perhaps my favorite function. Rebuild your `team` column with a logo and team name and render in a `gt` table. Gone are the days of awkwardly having separate columns for your logo and team name (`cbd_gt_logos()`). [Just like here!](https://x.com/andreweatherman/status/1730678741846704451?s=20)
 
 ## Why cbbdata?
 
