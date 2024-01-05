@@ -1,7 +1,7 @@
 Package: cbbdata
 Type: Package
 Title: API for College Basketball Data
-Version: 0.1.0
+Version: 0.2.0
 Authors@R: person("Andrew", "Weatherman", email = "andrew@aweatherman.com", 
   role = c("aut", "cre"))
 Description: Provides direct access to clean and tidy college basketball data using the 
