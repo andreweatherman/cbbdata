@@ -32,13 +32,15 @@ home:
     target: _blank
 reference:
 - title: Metric Ratings
-  desc: Functions for grabbing metric ratings from T-Rank
+  desc: Functions for grabbing metric ratings from various sources
   contents:
   - cbd_torvik_ratings
   - cbd_torvik_ratings_archive
   - cbd_torvik_team_factors
   - cbd_kenpom_ratings
   - cbd_kenpom_ratings_archive
+  - cbd_bpi_ratings
+  - cbd_all_metrics
 - title: Player Data
   desc: Functions for grabbing player-level data
   contents:
@@ -75,6 +77,7 @@ reference:
   - cbd_torvik_similar_resumes
 - title: Other
   contents:
+  - cbd_match_teams
   - cbd_create_account
   - cbd_login
   - cbd_kenpom_authorization
