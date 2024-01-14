@@ -31,6 +31,12 @@
     <loc>https://andreweatherman.github.io/cbbdata/reference/cbd_add_net_quad.html</loc>
   </url>
   <url>
+    <loc>https://andreweatherman.github.io/cbbdata/reference/cbd_all_metrics.html</loc>
+  </url>
+  <url>
+    <loc>https://andreweatherman.github.io/cbbdata/reference/cbd_bpi_ratings.html</loc>
+  </url>
+  <url>
     <loc>https://andreweatherman.github.io/cbbdata/reference/cbd_create_account.html</loc>
   </url>
   <url>
@@ -44,6 +50,9 @@
   </url>
   <url>
     <loc>https://andreweatherman.github.io/cbbdata/reference/cbd_login.html</loc>
+  </url>
+  <url>
+    <loc>https://andreweatherman.github.io/cbbdata/reference/cbd_match_teams.html</loc>
   </url>
   <url>
     <loc>https://andreweatherman.github.io/cbbdata/reference/cbd_teams.html</loc>
