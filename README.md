@@ -108,9 +108,9 @@ with it a rich collection of Barttorvik data.
 
 #### Metric Ratings:
 
--   Year-end ratings (`cbd_torvik_ratings`)
--   Day-by-day ratings (`cbd_torvik_ratings_archive`)
--   Team four factor splits (`cbd_torvik_team_factors`)
+- Year-end ratings (`cbd_torvik_ratings`)
+- Day-by-day ratings (`cbd_torvik_ratings_archive`)
+- Team four factor splits (`cbd_torvik_team_factors`)
 
 E.g., if you want to see what the no-bias T-Rank top 10 looks like:
 
@@ -118,26 +118,27 @@ E.g., if you want to see what the no-bias T-Rank top 10 looks like:
 cbbdata::cbd_torvik_team_factors(year = 2024, no_bias = TRUE) %>%
   dplyr::slice(1:10) %>%
   dplyr::select(team, barthag, adj_o, adj_d)
+#> API Key set!
 #> # A tibble: 10 × 4
 #>    team        barthag adj_o adj_d
 #>    <chr>         <dbl> <dbl> <dbl>
-#>  1 Houston       0.983  116.  81.2
-#>  2 Purdue        0.972  124.  91.0
-#>  3 Arizona       0.971  119.  87.7
-#>  4 Connecticut   0.963  125.  93.9
-#>  5 BYU           0.956  118.  90.1
-#>  6 Oklahoma      0.948  114.  88.8
-#>  7 Auburn        0.947  119.  93.0
-#>  8 Iowa St.      0.946  116.  90.1
-#>  9 Alabama       0.940  129. 102. 
-#> 10 Marquette     0.933  118.  93.8
+#>  1 Houston       0.979  117.  83.9
+#>  2 Purdue        0.974  126.  92.3
+#>  3 Auburn        0.955  120.  91.7
+#>  4 Connecticut   0.955  123.  94.4
+#>  5 Arizona       0.949  120.  92.9
+#>  6 Tennessee     0.944  118.  91.9
+#>  7 Alabama       0.941  126.  98.9
+#>  8 Iowa St.      0.940  115.  90.2
+#>  9 BYU           0.934  120.  95.3
+#> 10 Marquette     0.930  117.  93.1
 ```
 
 #### Player Data:
 
--   Individual game logs (`cbd_torvik_player_game`)
--   Season averages (`cbd_torvik_player_season`)
--   Season splits (`cbd_torvik_player_split`)
+- Individual game logs (`cbd_torvik_player_game`)
+- Season averages (`cbd_torvik_player_season`)
+- Season splits (`cbd_torvik_player_split`)
 
 E.g., if you want to see which ACC player averages the most points at
 home:
@@ -147,15 +148,16 @@ cbbdata::cbd_torvik_player_split(year = 2024, conf = 'ACC', split = 'location') 
   dplyr::filter(games >= 3) %>%
   dplyr::slice_max(pts, n = 1) %>%
   dplyr::select(team, player, pts, games)
-#>        team      player pts games
-#> 1: Syracuse Judah Mintz  26     5
+#>              team   player      pts games
+#>            <char>   <char>    <num> <int>
+#> 1: North Carolina RJ Davis 23.66667     6
 ```
 
 #### Team + Conference Data:
 
--   Team stats splits (`cbd_torvik_team_split`)
--   Team histories (`cbd_torvik_team_history`)
--   Conference four factor splits (`cbd_torvik_conf_factors`)
+- Team stats splits (`cbd_torvik_team_split`)
+- Team histories (`cbd_torvik_team_history`)
+- Conference four factor splits (`cbd_torvik_conf_factors`)
 
 E.g., if you want to see which conferences shoot the best at home
 against top 100 teams:
@@ -168,19 +170,19 @@ cbbdata::cbd_torvik_conf_factors(2024, venue = 'home', top = 100) %>%
 #> # A tibble: 5 × 3
 #>   conf  games   efg
 #>   <chr> <dbl> <dbl>
-#> 1 P12       6  55.5
-#> 2 SEC      13  51.1
-#> 3 BE       14  50.7
-#> 4 ACC      12  50.4
-#> 5 Amer      5  49.5
+#> 1 P12      39  55.3
+#> 2 MWC      36  52.4
+#> 3 B10      64  52  
+#> 4 SEC      62  51.1
+#> 5 B12      69  51.1
 ```
 
 #### Game Data:
 
--   Individual game box (`cbd_torvik_game_box`)
--   Individual game four factors (`cbd_torvik_game_factors`)
--   Individual game stats (box + factors) (`cbd_torvik_game_stats`)
--   Season schedule (`cbd_torvik_season_schedule`)
+- Individual game box (`cbd_torvik_game_box`)
+- Individual game four factors (`cbd_torvik_game_factors`)
+- Individual game stats (box + factors) (`cbd_torvik_game_stats`)
+- Season schedule (`cbd_torvik_season_schedule`)
 
 E.g., if you want to track how Duke’s offense has performed this season:
 
@@ -197,9 +199,9 @@ cbbdata::cbd_torvik_game_factors(year = 2024, team = 'Duke') %>%
 
 #### Predictions
 
--   Individual game predictions (`cbd_torvik_game_prediction`)
--   Team season predictions (`cbd_torvik_season_prediction`)
--   Team season simulations (`cbd_torvik_season_simulation`)
+- Individual game predictions (`cbd_torvik_game_prediction`)
+- Team season predictions (`cbd_torvik_season_prediction`)
+- Team season simulations (`cbd_torvik_season_simulation`)
 
 E.g., if you want to run 10,000 simulations of Duke’s season with their
 performance as of today:
@@ -216,12 +218,11 @@ cbbdata::cbd_torvik_season_simulation('Duke', 2024) %>%
 
 #### Tournament Results + Resumes
 
--   Daily NET rankings and quadrant records
-    (`cbd_torvik_current_resume`)
--   Tournament performance (`cbd_torvik_ncaa_results`)
--   Tournament “committee sheets” (`cbd_torvik_ncaa_sheets`)
--   Resume database (`cbd_torvik_resume_database`)
--   Similar team tournament resumes (`cbd_torvik_similar_resumes`)
+- Daily NET rankings and quadrant records (`cbd_torvik_current_resume`)
+- Tournament performance (`cbd_torvik_ncaa_results`)
+- Tournament “committee sheets” (`cbd_torvik_ncaa_sheets`)
+- Resume database (`cbd_torvik_resume_database`)
+- Similar team tournament resumes (`cbd_torvik_similar_resumes`)
 
 E.g., if you want to pull the five teams with the most Q1 NET wins:
 
@@ -230,16 +231,20 @@ cbbdata::cbd_torvik_current_resume() %>%
   dplyr::mutate(q1_wins = readr::parse_number(quad1)) %>%
   dplyr::slice_max(q1_wins, n = 5) %>%
   dplyr::select(team, conf, q1_wins, net)
-#> # A tibble: 7 × 4
-#>   team      conf  q1_wins   net
-#>   <chr>     <chr>   <dbl> <int>
-#> 1 Purdue    B10         5     3
-#> 2 Houston   B12         4     1
-#> 3 Arizona   P12         3     2
-#> 4 Kansas    B12         3    13
-#> 5 Clemson   ACC         3    15
-#> 6 Wisconsin B10         3    17
-#> 7 Texas A&M SEC         3    22
+#> # A tibble: 11 × 4
+#>    team           conf  q1_wins   net
+#>    <chr>          <chr>   <dbl> <int>
+#>  1 Purdue         B10         8     2
+#>  2 Connecticut    BE          8     3
+#>  3 Houston        B12         6     1
+#>  4 Wisconsin      B10         6    15
+#>  5 Arizona        P12         5     4
+#>  6 Kansas         B12         5    12
+#>  7 North Carolina ACC         5    10
+#>  8 Marquette      BE          5    11
+#>  9 Baylor         B12         5    14
+#> 10 Duke           ACC         5    20
+#> 11 Boise St.      MWC         5    40
 ```
 
 ### KenPom
@@ -259,45 +264,5 @@ cbbdata::cbd_kenpom_authorization(password = 'xxx')
 
 #### Metric Ratings:
 
--   Year-end ratings (`cbd_kenpom_ratings`)
--   Day-by-day ratings (`cbd_kenpom_ratings_archive`)
-
-### Other
-
-`cbbdata` ships with the `gt_theme_athletic` theme for `gt` tables. The
-theme is perfect for stat-focused tables, giving them a classic,
-monospaced feel.
-
-``` r
-cbbdata::cbd_torvik_ratings(year=2024) %>%
-  dplyr::slice(1:5) %>%
-  dplyr::select(team, conf, barthag, adj_o, adj_d) %>%
-  gt::gt() %>%
-  cbbdata::gt_theme_athletic()
-```
-
-<img src="man/figures/gt_theme.png" width="75%" />
-
-Also included in `cbbdata` is a helper function for plotting team logos
-with `gt`. Simply pass in a dataframe with team names, specify where
-your ‘team’ logo resides, and the name of the new column (using the same
-name as your ‘team’ column will replace that column – perfect for `gt`).
-
-``` r
-cbbdata::cbd_torvik_ratings(year=2024) %>%
-  dplyr::slice(1:5) %>%
-  dplyr::select(team, conf, barthag, adj_o, adj_d) %>%
-  cbbdata::cbd_gt_logos(team, team) %>%
-  gt::gt() %>%
-  cbbdata::gt_theme_athletic() %>%
-  gt::fmt_markdown(team) %>%
-  gt::cols_align(columns = team, 'left')
-```
-
-<img src="man/figures/with_logos.png" width="75%" />
-
-## Support
-
-The CBBData API is free to use but hosting it is not! If you find this
-resource helpful, please kindly consider [supporting me and the project
-on Ko-fi](https://ko-fi.com/andrewweatherman).
+- Year-end ratings (`cbd_kenpom_ratings`)
+- Day-by-day ratings (`cbd_kenpom_ratings_archive`)
