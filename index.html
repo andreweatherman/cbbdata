@@ -150,19 +150,20 @@
 <code class="sourceCode R"><span><span class="fu">cbbdata</span><span class="fu">::</span><span class="fu"><a href="reference/cbd_torvik_team_factors.html">cbd_torvik_team_factors</a></span><span class="op">(</span>year <span class="op">=</span> <span class="fl">2024</span>, no_bias <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="op"><a href="reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/slice.html" class="external-link">slice</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">10</span><span class="op">)</span> <span class="op"><a href="reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span><span class="va">team</span>, <span class="va">barthag</span>, <span class="va">adj_o</span>, <span class="va">adj_d</span><span class="op">)</span></span>
+<span><span class="co">#&gt; API Key set!</span></span>
 <span><span class="co">#&gt; # A tibble: 10 × 4</span></span>
 <span><span class="co">#&gt;    team        barthag adj_o adj_d</span></span>
 <span><span class="co">#&gt;    &lt;chr&gt;         &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;</span></span>
-<span><span class="co">#&gt;  1 Houston       0.983  116.  81.2</span></span>
-<span><span class="co">#&gt;  2 Purdue        0.972  124.  91.0</span></span>
-<span><span class="co">#&gt;  3 Arizona       0.971  119.  87.7</span></span>
-<span><span class="co">#&gt;  4 Connecticut   0.963  125.  93.9</span></span>
-<span><span class="co">#&gt;  5 BYU           0.956  118.  90.1</span></span>
-<span><span class="co">#&gt;  6 Oklahoma      0.948  114.  88.8</span></span>
-<span><span class="co">#&gt;  7 Auburn        0.947  119.  93.0</span></span>
-<span><span class="co">#&gt;  8 Iowa St.      0.946  116.  90.1</span></span>
-<span><span class="co">#&gt;  9 Alabama       0.940  129. 102. </span></span>
-<span><span class="co">#&gt; 10 Marquette     0.933  118.  93.8</span></span></code></pre></div>
+<span><span class="co">#&gt;  1 Houston       0.979  117.  83.9</span></span>
+<span><span class="co">#&gt;  2 Purdue        0.974  126.  92.3</span></span>
+<span><span class="co">#&gt;  3 Auburn        0.955  120.  91.7</span></span>
+<span><span class="co">#&gt;  4 Connecticut   0.955  123.  94.4</span></span>
+<span><span class="co">#&gt;  5 Arizona       0.949  120.  92.9</span></span>
+<span><span class="co">#&gt;  6 Tennessee     0.944  118.  91.9</span></span>
+<span><span class="co">#&gt;  7 Alabama       0.941  126.  98.9</span></span>
+<span><span class="co">#&gt;  8 Iowa St.      0.940  115.  90.2</span></span>
+<span><span class="co">#&gt;  9 BYU           0.934  120.  95.3</span></span>
+<span><span class="co">#&gt; 10 Marquette     0.930  117.  93.1</span></span></code></pre></div>
 </div>
 <div class="section level4">
 <h4 id="player-data">Player Data:<a class="anchor" aria-label="anchor" href="#player-data"></a>
@@ -178,8 +179,9 @@
 <span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">games</span> <span class="op">&gt;=</span> <span class="fl">3</span><span class="op">)</span> <span class="op"><a href="reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/slice.html" class="external-link">slice_max</a></span><span class="op">(</span><span class="va">pts</span>, n <span class="op">=</span> <span class="fl">1</span><span class="op">)</span> <span class="op"><a href="reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span><span class="va">team</span>, <span class="va">player</span>, <span class="va">pts</span>, <span class="va">games</span><span class="op">)</span></span>
-<span><span class="co">#&gt;        team      player pts games</span></span>
-<span><span class="co">#&gt; 1: Syracuse Judah Mintz  26     5</span></span></code></pre></div>
+<span><span class="co">#&gt;              team   player      pts games</span></span>
+<span><span class="co">#&gt;            &lt;char&gt;   &lt;char&gt;    &lt;num&gt; &lt;int&gt;</span></span>
+<span><span class="co">#&gt; 1: North Carolina RJ Davis 23.66667     6</span></span></code></pre></div>
 </div>
 <div class="section level4">
 <h4 id="team--conference-data">Team + Conference Data:<a class="anchor" aria-label="anchor" href="#team--conference-data"></a>
@@ -198,11 +200,11 @@
 <span><span class="co">#&gt; # A tibble: 5 × 3</span></span>
 <span><span class="co">#&gt;   conf  games   efg</span></span>
 <span><span class="co">#&gt;   &lt;chr&gt; &lt;dbl&gt; &lt;dbl&gt;</span></span>
-<span><span class="co">#&gt; 1 P12       6  55.5</span></span>
-<span><span class="co">#&gt; 2 SEC      13  51.1</span></span>
-<span><span class="co">#&gt; 3 BE       14  50.7</span></span>
-<span><span class="co">#&gt; 4 ACC      12  50.4</span></span>
-<span><span class="co">#&gt; 5 Amer      5  49.5</span></span></code></pre></div>
+<span><span class="co">#&gt; 1 P12      39  55.3</span></span>
+<span><span class="co">#&gt; 2 MWC      36  52.4</span></span>
+<span><span class="co">#&gt; 3 B10      64  52  </span></span>
+<span><span class="co">#&gt; 4 SEC      62  51.1</span></span>
+<span><span class="co">#&gt; 5 B12      69  51.1</span></span></code></pre></div>
 </div>
 <div class="section level4">
 <h4 id="game-data">Game Data:<a class="anchor" aria-label="anchor" href="#game-data"></a>
@@ -256,16 +258,20 @@
 <span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html" class="external-link">mutate</a></span><span class="op">(</span>q1_wins <span class="op">=</span> <span class="fu">readr</span><span class="fu">::</span><span class="fu"><a href="https://readr.tidyverse.org/reference/parse_number.html" class="external-link">parse_number</a></span><span class="op">(</span><span class="va">quad1</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/slice.html" class="external-link">slice_max</a></span><span class="op">(</span><span class="va">q1_wins</span>, n <span class="op">=</span> <span class="fl">5</span><span class="op">)</span> <span class="op"><a href="reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span><span class="va">team</span>, <span class="va">conf</span>, <span class="va">q1_wins</span>, <span class="va">net</span><span class="op">)</span></span>
-<span><span class="co">#&gt; # A tibble: 7 × 4</span></span>
-<span><span class="co">#&gt;   team      conf  q1_wins   net</span></span>
-<span><span class="co">#&gt;   &lt;chr&gt;     &lt;chr&gt;   &lt;dbl&gt; &lt;int&gt;</span></span>
-<span><span class="co">#&gt; 1 Purdue    B10         5     3</span></span>
-<span><span class="co">#&gt; 2 Houston   B12         4     1</span></span>
-<span><span class="co">#&gt; 3 Arizona   P12         3     2</span></span>
-<span><span class="co">#&gt; 4 Kansas    B12         3    13</span></span>
-<span><span class="co">#&gt; 5 Clemson   ACC         3    15</span></span>
-<span><span class="co">#&gt; 6 Wisconsin B10         3    17</span></span>
-<span><span class="co">#&gt; 7 Texas A&amp;M SEC         3    22</span></span></code></pre></div>
+<span><span class="co">#&gt; # A tibble: 11 × 4</span></span>
+<span><span class="co">#&gt;    team           conf  q1_wins   net</span></span>
+<span><span class="co">#&gt;    &lt;chr&gt;          &lt;chr&gt;   &lt;dbl&gt; &lt;int&gt;</span></span>
+<span><span class="co">#&gt;  1 Purdue         B10         8     2</span></span>
+<span><span class="co">#&gt;  2 Connecticut    BE          8     3</span></span>
+<span><span class="co">#&gt;  3 Houston        B12         6     1</span></span>
+<span><span class="co">#&gt;  4 Wisconsin      B10         6    15</span></span>
+<span><span class="co">#&gt;  5 Arizona        P12         5     4</span></span>
+<span><span class="co">#&gt;  6 Kansas         B12         5    12</span></span>
+<span><span class="co">#&gt;  7 North Carolina ACC         5    10</span></span>
+<span><span class="co">#&gt;  8 Marquette      BE          5    11</span></span>
+<span><span class="co">#&gt;  9 Baylor         B12         5    14</span></span>
+<span><span class="co">#&gt; 10 Duke           ACC         5    20</span></span>
+<span><span class="co">#&gt; 11 Boise St.      MWC         5    40</span></span></code></pre></div>
 </div>
 </div>
 <div class="section level3">
@@ -284,34 +290,6 @@
 </ul>
 </div>
 </div>
-<div class="section level3">
-<h3 id="other">Other<a class="anchor" aria-label="anchor" href="#other"></a>
-</h3>
-<p><code>cbbdata</code> ships with the <code>gt_theme_athletic</code> theme for <code>gt</code> tables. The theme is perfect for stat-focused tables, giving them a classic, monospaced feel.</p>
-<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">cbbdata</span><span class="fu">::</span><span class="fu"><a href="reference/cbd_torvik_ratings.html">cbd_torvik_ratings</a></span><span class="op">(</span>year<span class="op">=</span><span class="fl">2024</span><span class="op">)</span> <span class="op"><a href="reference/pipe.html">%&gt;%</a></span></span>
-<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/slice.html" class="external-link">slice</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span><span class="op">)</span> <span class="op"><a href="reference/pipe.html">%&gt;%</a></span></span>
-<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span><span class="va">team</span>, <span class="va">conf</span>, <span class="va">barthag</span>, <span class="va">adj_o</span>, <span class="va">adj_d</span><span class="op">)</span> <span class="op"><a href="reference/pipe.html">%&gt;%</a></span></span>
-<span>  <span class="fu">gt</span><span class="fu">::</span><span class="fu"><a href="https://gt.rstudio.com/reference/gt.html" class="external-link">gt</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="reference/pipe.html">%&gt;%</a></span></span>
-<span>  <span class="fu">cbbdata</span><span class="fu">::</span><span class="fu">gt_theme_athletic</span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-<p><img src="reference/figures/gt_theme.png" width="75%"></p>
-<p>Also included in <code>cbbdata</code> is a helper function for plotting team logos with <code>gt</code>. Simply pass in a dataframe with team names, specify where your ‘team’ logo resides, and the name of the new column (using the same name as your ‘team’ column will replace that column – perfect for <code>gt</code>).</p>
-<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">cbbdata</span><span class="fu">::</span><span class="fu"><a href="reference/cbd_torvik_ratings.html">cbd_torvik_ratings</a></span><span class="op">(</span>year<span class="op">=</span><span class="fl">2024</span><span class="op">)</span> <span class="op"><a href="reference/pipe.html">%&gt;%</a></span></span>
-<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/slice.html" class="external-link">slice</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span><span class="op">)</span> <span class="op"><a href="reference/pipe.html">%&gt;%</a></span></span>
-<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span><span class="va">team</span>, <span class="va">conf</span>, <span class="va">barthag</span>, <span class="va">adj_o</span>, <span class="va">adj_d</span><span class="op">)</span> <span class="op"><a href="reference/pipe.html">%&gt;%</a></span></span>
-<span>  <span class="fu">cbbdata</span><span class="fu">::</span><span class="fu">cbd_gt_logos</span><span class="op">(</span><span class="va">team</span>, <span class="va">team</span><span class="op">)</span> <span class="op"><a href="reference/pipe.html">%&gt;%</a></span></span>
-<span>  <span class="fu">gt</span><span class="fu">::</span><span class="fu"><a href="https://gt.rstudio.com/reference/gt.html" class="external-link">gt</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="reference/pipe.html">%&gt;%</a></span></span>
-<span>  <span class="fu">cbbdata</span><span class="fu">::</span><span class="fu">gt_theme_athletic</span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="reference/pipe.html">%&gt;%</a></span></span>
-<span>  <span class="fu">gt</span><span class="fu">::</span><span class="fu"><a href="https://gt.rstudio.com/reference/fmt_markdown.html" class="external-link">fmt_markdown</a></span><span class="op">(</span><span class="va">team</span><span class="op">)</span> <span class="op"><a href="reference/pipe.html">%&gt;%</a></span></span>
-<span>  <span class="fu">gt</span><span class="fu">::</span><span class="fu"><a href="https://gt.rstudio.com/reference/cols_align.html" class="external-link">cols_align</a></span><span class="op">(</span>columns <span class="op">=</span> <span class="va">team</span>, <span class="st">'left'</span><span class="op">)</span></span></code></pre></div>
-<p><img src="reference/figures/with_logos.png" width="75%"></p>
-</div>
-</div>
-<div class="section level2">
-<h2 id="support">Support<a class="anchor" aria-label="anchor" href="#support"></a>
-</h2>
-<p>The CBBData API is free to use but hosting it is not! If you find this resource helpful, please kindly consider <a href="https://ko-fi.com/andrewweatherman" class="external-link">supporting me and the project on Ko-fi</a>.</p>
 </div>
 </div>
   </main><aside class="col-md-3"><div class="links">
