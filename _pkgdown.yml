@@ -60,6 +60,7 @@ reference:
   - cbd_torvik_game_factors
   - cbd_torvik_game_stats
   - cbd_torvik_season_schedule
+  - cbd_torvik_team_schedule
   - cbd_add_net_quad
 - title: Predictions
   desc: Functions for running T-Rank predictions and Monte Carlo simulations

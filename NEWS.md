@@ -3,6 +3,7 @@
 - Added [`cbd_all_metrics`](https://cbbdata.aweatherman.com/reference/cbd_all_metrics.html) to source Torvik, KenPom, BPI, SOR/SOS, and NET in one unified tibble.
 - Added [`cbd_match_teams`](https://cbbdata.aweatherman.com/reference/cbd_match_teams.html) to build a team-matching named vector.
 - KenPom authorization is no longer needed for [`cbd_kenpom_ratings`] (these ratings are public).
+- Added [`cbd_torvik_team_schedule`](https://cbbdata.aweatherman.com/reference/cbd_torvik_team_schedule.html) to query team schedules
 
 # cbbdata 0.2.0
 
