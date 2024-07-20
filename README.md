@@ -1,39 +1,27 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# Welcome to CBBData: Your Gateway to In-Depth College Basketball Insights
+# CBBData, Your Gateway to In-Depth College Basketball Insights
 
 <!-- badges: start -->
 <!-- badges: end -->
 
-In the vast arena of college basketball data, finding comprehensive,
-easily accessible, and up-to-date statistics can be a daunting task.
-`cbbdata` emerges as your reliable partner in this quest, offering an
-unparalleled depth of college basketball insights, just a line of code
-away.
+Getting reliable, up-to-date college basketball data shouldn’t be a
+hassle. With `cbbdata`, it isn’t. This package makes it straightforward
+to access a wide range of stats with minimal effort.
 
-**Unmatched Access, Uncomplicated Process:** `cbbdata` is your key to
-unlocking a treasure trove of college basketball statistics. Say goodbye
-to the hurdles of data scraping. Our package is designed for efficiency
-and simplicity, providing a straightforward pathway to the data you
-need.
+**Easy Access:** `cbbdata` simplifies the process of fetching college
+basketball statistics. No more scraping or searching through multiple
+sources: just clean, easy access to the data you need.
 
-**Powered by Precision and Speed:** At the heart of `cbbdata` lies a
-robust architecture, powered by Flask and Python. Leveraging SQL queries
-and direct file transfers, we ensure you receive the most accurate and
-recent data. Our commitment to speed and reliability means you get the
-data you need, when you need it, without the wait.
+**Fast and Accurate:** Built with Flask and Python, `cbbdata` uses SQL
+queries and direct file transfers to ensure you get accurate and current
+data quickly. Our database is updated every 15 minutes during the
+season.
 
-**Diverse Data at Your Fingertips:** Whether you’re looking for detailed
-player stats, team analytics, game outcomes, or advanced metrics,
-`cbbdata` has it all. Our comprehensive database is constantly evolving,
-bringing you the latest and most detailed insights into the college
-basketball world.
-
-**Getting Started is Easy:** Begin your journey with `cbbdata` by
-signing up for a free API key. With this key, a world of college
-basketball data awaits you. Experience the ease and power of `cbbdata`
-and elevate your analysis to the next level.
+**Comprehensive Data:** Whether you need player stats, team analytics,
+game results, or advanced metrics, `cbbdata` has you covered with nearly
+30 endpoints.
 
 ## Installation
 
@@ -118,20 +106,19 @@ E.g., if you want to see what the no-bias T-Rank top 10 looks like:
 cbbdata::cbd_torvik_team_factors(year = 2024, no_bias = TRUE) %>%
   dplyr::slice(1:10) %>%
   dplyr::select(team, barthag, adj_o, adj_d)
-#> API Key set!
 #> # A tibble: 10 × 4
-#>    team        barthag adj_o adj_d
-#>    <chr>         <dbl> <dbl> <dbl>
-#>  1 Houston       0.979  117.  83.9
-#>  2 Purdue        0.974  126.  92.3
-#>  3 Auburn        0.955  120.  91.7
-#>  4 Connecticut   0.955  123.  94.4
-#>  5 Arizona       0.949  120.  92.9
-#>  6 Tennessee     0.944  118.  91.9
-#>  7 Alabama       0.941  126.  98.9
-#>  8 Iowa St.      0.940  115.  90.2
-#>  9 BYU           0.934  120.  95.3
-#> 10 Marquette     0.930  117.  93.1
+#>    team           barthag adj_o adj_d
+#>    <chr>            <dbl> <dbl> <dbl>
+#>  1 Houston          0.978  119.  85.7
+#>  2 Connecticut      0.977  127.  92.0
+#>  3 Purdue           0.967  126.  93.8
+#>  4 Auburn           0.953  120.  92.6
+#>  5 Arizona          0.952  121.  93.0
+#>  6 Iowa St.         0.950  114.  88.0
+#>  7 Tennessee        0.945  116.  90.5
+#>  8 North Carolina   0.937  119.  93.9
+#>  9 Duke             0.935  121.  95.7
+#> 10 Marquette        0.928  118.  94.4
 ```
 
 #### Player Data:
@@ -145,12 +132,11 @@ home:
 
 ``` r
 cbbdata::cbd_torvik_player_split(year = 2024, conf = 'ACC', split = 'location') %>%
-  dplyr::filter(games >= 3) %>%
+  dplyr::filter(games >= 10) %>%
   dplyr::slice_max(pts, n = 1) %>%
   dplyr::select(team, player, pts, games)
-#>              team   player      pts games
-#>            <char>   <char>    <num> <int>
-#> 1: North Carolina RJ Davis 23.66667     6
+#>              team   player   pts games
+#> 1: North Carolina RJ Davis 22.75    12
 ```
 
 #### Team + Conference Data:
@@ -167,14 +153,15 @@ cbbdata::cbd_torvik_conf_factors(2024, venue = 'home', top = 100) %>%
   dplyr::filter(games >= 5) %>%
   dplyr::slice_max(efg, n = 5) %>%
   dplyr::select(conf, games, efg)
-#> # A tibble: 5 × 3
+#> # A tibble: 6 × 3
 #>   conf  games   efg
 #>   <chr> <dbl> <dbl>
-#> 1 P12      39  55.3
-#> 2 MWC      36  52.4
-#> 3 B10      64  52  
-#> 4 SEC      62  51.1
-#> 5 B12      69  51.1
+#> 1 P12      78  52.8
+#> 2 B10     125  51.6
+#> 3 B12     121  51.3
+#> 4 MWC      70  51.2
+#> 5 BE      108  51.1
+#> 6 ACC     112  51.1
 ```
 
 #### Game Data:
@@ -219,6 +206,7 @@ cbbdata::cbd_torvik_season_simulation('Duke', 2024) %>%
 #### Tournament Results + Resumes
 
 - Daily NET rankings and quadrant records (`cbd_torvik_current_resume`)
+- Historical NET rankings and per-day metrics (`cbd_net_archive`)
 - Tournament performance (`cbd_torvik_ncaa_results`)
 - Tournament “committee sheets” (`cbd_torvik_ncaa_sheets`)
 - Resume database (`cbd_torvik_resume_database`)
@@ -231,20 +219,14 @@ cbbdata::cbd_torvik_current_resume() %>%
   dplyr::mutate(q1_wins = readr::parse_number(quad1)) %>%
   dplyr::slice_max(q1_wins, n = 5) %>%
   dplyr::select(team, conf, q1_wins, net)
-#> # A tibble: 11 × 4
-#>    team           conf  q1_wins   net
-#>    <chr>          <chr>   <dbl> <int>
-#>  1 Purdue         B10         8     2
-#>  2 Connecticut    BE          8     3
-#>  3 Houston        B12         6     1
-#>  4 Wisconsin      B10         6    15
-#>  5 Arizona        P12         5     4
-#>  6 Kansas         B12         5    12
-#>  7 North Carolina ACC         5    10
-#>  8 Marquette      BE          5    11
-#>  9 Baylor         B12         5    14
-#> 10 Duke           ACC         5    20
-#> 11 Boise St.      MWC         5    40
+#> # A tibble: 5 × 4
+#>   team        conf  q1_wins   net
+#>   <chr>       <chr>   <dbl> <int>
+#> 1 Connecticut BE         19    12
+#> 2 Purdue      B10        18    16
+#> 3 Houston     B12        17     1
+#> 4 Tennessee   SEC        14     5
+#> 5 Texas A&M   SEC        13    21
 ```
 
 ### KenPom

@@ -17,6 +17,7 @@
 #' @importFrom httr modify_url
 #' @importFrom jsonlite fromJSON
 #' @importFrom magrittr %>%
+#' @importFrom lubridate month
 #' @examples
 #' \donttest{try(cbd_torvik_season_simulation('Duke', 2023, date = '20230101'))}
 #'
@@ -26,7 +27,8 @@ cbd_torvik_season_simulation <- function(team, year, simulations = 10000, date =
 
   cbbdata:::check_key() # ensure user is logged-in
 
-  if(is.null(date)) { date = gsub('-', '', Sys.Date() - 1) }
+  if(is.null(date) & lubridate::month(Sys.Date()) %in% c(11:12, 1:4)) { date = gsub('-', '', Sys.Date() - 1) } else (date = cbbdata::last_sim_dates[as.character(year)])
+  
 
   url <- modify_url(
     url = 'https://www.cbbdata.com/api/torvik/season/simulation?',

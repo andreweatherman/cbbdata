@@ -1,7 +1,7 @@
 Package: cbbdata
 Type: Package
 Title: API for College Basketball Data
-Version: 0.3.0
+Version: 0.3.0.9000
 Authors@R: person("Andrew", "Weatherman", email = "andrew@aweatherman.com", 
   role = c("aut", "cre"))
 Description: Provides direct access to clean and tidy college basketball data using the 
@@ -37,3 +37,5 @@ Roxygen: list(markdown = TRUE)
 URL: https://cbbdata.aweatherman.com/
 BugReports: https://github.com/andreweatherman/cbbdata
 Config/Needs/website: rmarkdown
+Depends: 
+    R (>= 2.10)

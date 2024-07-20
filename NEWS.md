@@ -1,3 +1,6 @@
+# cbbdata (development version, 2024-07-20)
+- Added [`cbd_net_archive`](https://cbbdata.aweatherman.com/reference/cbd_net_archive.html) to pull daily NET rankings, along with KenPom and Torvik ratings, from the 2023-24 season. This endpoint will update throughout the 2024-25 season. Prior data might be added in future versions.
+
 # cbbdata 0.3.0
 - Added [`cbd_bpi_ratings`](https://cbbdata.aweatherman.com/reference/cbd_bpi_ratings.html) to pull current ESPN BPI ratings + rankings, SOR/SOS, and tournament projections.
 - Added [`cbd_all_metrics`](https://cbbdata.aweatherman.com/reference/cbd_all_metrics.html) to source Torvik, KenPom, BPI, SOR/SOS, and NET in one unified tibble.

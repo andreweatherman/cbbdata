@@ -14,20 +14,18 @@ knitr::opts_chunk$set(
 library(tidyverse)
 ```
 
-# Welcome to CBBData: Your Gateway to In-Depth College Basketball Insights
+# CBBData, Your Gateway to In-Depth College Basketball Insights
 
 <!-- badges: start -->
 <!-- badges: end -->
 
-In the vast arena of college basketball data, finding comprehensive, easily accessible, and up-to-date statistics can be a daunting task. `cbbdata` emerges as your reliable partner in this quest, offering an unparalleled depth of college basketball insights, just a line of code away.
+Getting reliable, up-to-date college basketball data shouldn't be a hassle. With `cbbdata`, it isn't. This package makes it straightforward to access a wide range of stats with minimal effort.
 
-**Unmatched Access, Uncomplicated Process:** `cbbdata` is your key to unlocking a treasure trove of college basketball statistics. Say goodbye to the hurdles of data scraping. Our package is designed for efficiency and simplicity, providing a straightforward pathway to the data you need.
+**Easy Access:** `cbbdata` simplifies the process of fetching college basketball statistics. No more scraping or searching through multiple sources: just clean, easy access to the data you need.
 
-**Powered by Precision and Speed:** At the heart of `cbbdata` lies a robust architecture, powered by Flask and Python. Leveraging SQL queries and direct file transfers, we ensure you receive the most accurate and recent data. Our commitment to speed and reliability means you get the data you need, when you need it, without the wait.
+**Fast and Accurate:** Built with Flask and Python, `cbbdata` uses SQL queries and direct file transfers to ensure you get accurate and current data quickly. Our database is updated every 15 minutes during the season.
 
-**Diverse Data at Your Fingertips:** Whether you're looking for detailed player stats, team analytics, game outcomes, or advanced metrics, `cbbdata` has it all. Our comprehensive database is constantly evolving, bringing you the latest and most detailed insights into the college basketball world.
-
-**Getting Started is Easy:** Begin your journey with `cbbdata` by signing up for a free API key. With this key, a world of college basketball data awaits you. Experience the ease and power of `cbbdata` and elevate your analysis to the next level.
+**Comprehensive Data:** Whether you need player stats, team analytics, game results, or advanced metrics, `cbbdata` has you covered with nearly 30 endpoints.
 
 ## Installation
 
@@ -101,7 +99,7 @@ cbbdata::cbd_torvik_team_factors(year = 2024, no_bias = TRUE) %>%
 E.g., if you want to see which ACC player averages the most points at home:
 ```{r, message=FALSE, warning=FALSE}
 cbbdata::cbd_torvik_player_split(year = 2024, conf = 'ACC', split = 'location') %>%
-  dplyr::filter(games >= 3) %>%
+  dplyr::filter(games >= 10) %>%
   dplyr::slice_max(pts, n = 1) %>%
   dplyr::select(team, player, pts, games)
 ```
@@ -151,6 +149,7 @@ cbbdata::cbd_torvik_season_simulation('Duke', 2024) %>%
 
 #### Tournament Results + Resumes
 -   Daily NET rankings and quadrant records (`cbd_torvik_current_resume`)
+-   Historical NET rankings and per-day metrics (`cbd_net_archive`)
 -   Tournament performance (`cbd_torvik_ncaa_results`)
 -   Tournament "committee sheets" (`cbd_torvik_ncaa_sheets`)
 -   Resume database (`cbd_torvik_resume_database`)

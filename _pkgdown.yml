@@ -27,8 +27,14 @@ home:
   - text: Andrew's Twitter
     href: https://twitter.com/andreweatherman
     target: _blank
+  - text: cbbplotR Package
+    href: https://cbbplotr.aweatherman.com/
+    target: _blank
   - text: Andrew's Personal Site
     href: https://www.aweatherman.com/
+    target: _blank
+  - text: Andrew's Viz Site
+    href: https://www.viz.aweatherman.com/
     target: _blank
 reference:
 - title: Metric Ratings
@@ -41,6 +47,7 @@ reference:
   - cbd_kenpom_ratings_archive
   - cbd_bpi_ratings
   - cbd_all_metrics
+  - cbd_net_archive
 - title: Player Data
   desc: Functions for grabbing player-level data
   contents:
