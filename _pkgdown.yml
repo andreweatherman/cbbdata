@@ -48,6 +48,7 @@ reference:
   - cbd_bpi_ratings
   - cbd_all_metrics
   - cbd_net_archive
+  - cbd_ap_rankings
 - title: Player Data
   desc: Functions for grabbing player-level data
   contents:

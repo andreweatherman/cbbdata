@@ -3,6 +3,7 @@
 export("%>%")
 export(cbd_add_net_quad)
 export(cbd_all_metrics)
+export(cbd_ap_rankings)
 export(cbd_bpi_ratings)
 export(cbd_create_account)
 export(cbd_kenpom_authorization)
