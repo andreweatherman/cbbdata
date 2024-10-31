@@ -21,8 +21,6 @@ In May 2023, I embarked on a new project: `cbbdata`. This Flask-based API is des
 
 A bit more about me for those joining from Twitter: I graduated from Duke University in 2023. During my time there, I was a student manager for the men's basketball program, coinciding with Coach K's final run and Jon Scheyer's first season.
 
-Currently, I'm pursuing a degree in Mathematics at the University of North Carolina at Charlotte, with an expected graduation date of May 2024. Post-graduation, my plans are to either continue my education with a master’s in data science or jump straight into the workforce.
-
 ## What is cbbdata?
 
 `cbbdata` is an R package designed for anyone passionate about college basketball statistics. It simplifies the process of accessing and analyzing a wealth of college basketball data, making it more efficient and user-friendly than ever before.
